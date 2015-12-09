@@ -9,10 +9,10 @@
     <meta name="keywords" content="web-developer, javascript, jquery, html, web-design, web-apps, css" />
     <meta name="author" content="Tyler Palmer" />
 
-    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--[if IE]>
@@ -20,6 +20,32 @@
     <![endif]-->
   </head>
   <body>
+    <div class="body-container" id="body-container">
+
+      <nav class="sidebar st-effect-2" id="sidebar">
+        <ul>
+          <li><a href="" class="icon">About</a></li>
+          <li><a href="" class="icon">Skills</a></li>
+          <li><a href="" class="icon">Work</a></li>
+          <li><a href="" class="icon">Contact</a></li>
+          <li><a href="" class="social">Social Links</a></li>
+        </ul>
+      </nav>
+
+      <div class="pusher">
+        <div class="main-content">
+          <div class="main-content-inner">
+            <header class="codrops-header">
+              <h1>Tyler Palmer<span>Futuristic Web Developer</span></h1>
+            </header>
+            <button id="sidebar-button" data-effect="st-effect-2">Slide in on top</button>
+          </div><!--for main-content-inner wrapper-->
+        </div><!--for main-content wrapper-->
+      </div><!--pusher-->
+    </div> <!--for body container-->
+
+		<script src="js/classie.js"></script>
+		<script src="js/sidebarEffects.js"></script>
 
   </body>
 </html>

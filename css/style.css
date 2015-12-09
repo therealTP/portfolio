@@ -1,0 +1,129 @@
+*,
+*:after,
+*::before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body,
+.body-container,
+.main-content {
+	height: 100%;
+}
+
+body {
+  color: white;
+}
+
+.main-content {
+  background: url('../img/veil-nebula.jpg') no-repeat;
+  /*background-size: 100%;*/
+}
+
+.main-content, .pusher {
+	overflow-y: hidden;
+}
+
+.main-content,
+.main-content-inner {
+	position: relative;
+  width: 100%;
+}
+
+.body-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.pusher {
+	position: relative;
+	left: 0;
+	z-index: 50;
+	height: 100%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.pusher::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+.st-menu-open .pusher::after {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	visibility: hidden;
+	width: 150px;
+	height: 100%;
+	background: #bebebe;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.sidebar::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	content: '';
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.st-menu-open .sidebar::after {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+/* Individual effects */
+
+/* Effect 2: Reveal */
+.st-effect-2.st-menu-open .pusher {
+	-webkit-transform: translate3d(150px, 0, 0);
+	transform: translate3d(150px, 0, 0);
+}
+
+.st-effect-2.sidebar {
+	z-index: 1;
+}
+
+.st-effect-2.st-menu-open .st-effect-2.sidebar {
+	visibility: visible;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.st-effect-2.sidebar::after {
+	display: none;
+}
+
+/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+.no-csstransforms3d .st-pusher,
+.no-js .st-pusher {
+	padding-left: 300px;
+}
