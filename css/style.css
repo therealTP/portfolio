@@ -12,23 +12,10 @@ body,
 	height: 100%;
 }
 
-body {
-  color: white;
-}
-
-.main-content {
-  background: url('../img/veil-nebula.jpg') no-repeat;
-  /*background-size: 100%;*/
-}
-
-.main-content, .pusher {
-	overflow-y: hidden;
-}
-
-.main-content,
-.main-content-inner {
-	position: relative;
-  width: 100%;
+body, a {
+  color: #F0F0F0;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
 }
 
 .body-container {
@@ -36,35 +23,7 @@ body {
 	overflow: hidden;
 }
 
-.pusher {
-	position: relative;
-	left: 0;
-	z-index: 50;
-	height: 100%;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
-}
-
-.pusher::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	background: rgba(255,255,255,0.2);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-
-.st-menu-open .pusher::after {
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-}
+/* ----SIDEBAR MENU---- */
 
 .sidebar {
 	position: absolute;
@@ -74,7 +33,7 @@ body {
 	visibility: hidden;
 	width: 150px;
 	height: 100%;
-	background: #bebebe;
+	background: #779ecb;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
@@ -84,12 +43,32 @@ body {
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 100%;
 	background: rgba(0,0,0,0.2);
 	content: '';
 	opacity: 1;
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
+}
+
+.sidebar .menu-button {
+	display: block;
+	height: 23%;
+	border-bottom: 1px solid #F0F0F0;
+	text-align: center;
+	padding-top: 27%;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.menu-social {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	padding-top: 8%;
+}
+
+.menu-social a {
+	margin: 0 11px;
 }
 
 .st-menu-open .sidebar::after {
@@ -100,9 +79,7 @@ body {
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
-/* Individual effects */
-
-/* Effect 2: Reveal */
+/* Effects for sidebar open */
 .st-effect-2.st-menu-open .pusher {
 	-webkit-transform: translate3d(150px, 0, 0);
 	transform: translate3d(150px, 0, 0);
@@ -122,8 +99,109 @@ body {
 	display: none;
 }
 
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+/* 'pusher' class = main content getting pushed by sidebar */
+
+.pusher {
+	position: relative;
+	left: 0;
+	z-index: 50;
+	height: 100%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.pusher::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+.st-menu-open .pusher::after {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+/* Fallback for browsers that don't support 3D transforms (and no JS fallback) */
 .no-csstransforms3d .st-pusher,
 .no-js .st-pusher {
 	padding-left: 300px;
+}
+
+/* ---- MAIN CONTENT ---- */
+
+.main-content {
+
+	/*background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/veil-nebula.jpg') no-repeat;*/
+
+	background-color: #77dd77;
+
+}
+
+.main-content, .pusher {
+	overflow-y: hidden;
+}
+
+.main-content,
+.main-content-inner {
+	position: relative;
+  width: 100%;
+}
+
+/*set up inner main content wrapper as flex box*/
+.main-content-inner {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.right-side-column {
+	flex-grow: 1;
+	padding-top: 15%;
+	padding-right: 30px;
+}
+
+.left-side-column {
+	padding-left: 30px;
+	padding-top: 21%;
+}
+
+.main-social {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 200px;
+}
+
+.center-column {
+	flex-grow: 12;
+	text-align: center;
+	padding: 15% 10%;
+	text-transform: uppercase;
+}
+
+.center-column header {
+	border-top: 1px solid #F0F0F0;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.center-column h1 {
+	font-size: 100px;
+}
+
+.center-column h4 {
+	font-size: 36px;
+	margin-bottom: 25px;
+}
+
+.down-button {
+	margin-top: 15%;
 }

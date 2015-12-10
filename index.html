@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -23,22 +24,57 @@
     <div class="body-container" id="body-container">
 
       <nav class="sidebar st-effect-2" id="sidebar">
-        <ul>
-          <li><a href="" class="icon">About</a></li>
-          <li><a href="" class="icon">Skills</a></li>
-          <li><a href="" class="icon">Work</a></li>
-          <li><a href="" class="icon">Contact</a></li>
-          <li><a href="" class="social">Social Links</a></li>
-        </ul>
+        <a href="#bio" class="menu-button">
+          <i class="fa fa-book fa-3x"></i>
+          <p class="menu-button-text">Bio</p>
+        </a>
+        <a href="#skills" class="menu-button">
+          <i class="fa fa-rocket fa-3x"></i>
+          <p class="menu-button-text">Skills</p>
+        </a>
+        <a href="#projects" class="menu-button">
+          <i class="fa fa-folder-o fa-3x"></i>
+          <p class="menu-button-text">Projects</p>
+        </a>
+        <a href="#contact" class="menu-button">
+          <i class="fa fa-send-o fa-3x"></i>
+          <p class="menu-button-text">Contact</p>
+        </a>
+        <div class="menu-social">
+          <a href="" class="social-link"><i class="fa social-icon fa-github fa-2x"></i></a>
+          <a href="" class="social-link"><i class="fa social-icon fa-linkedin fa-2x"></i></a>
+          <a href="" class="social-link"><i class="fa social-icon fa-facebook fa-2x"></i></a>
+        </div>
       </nav>
 
       <div class="pusher">
         <div class="main-content">
           <div class="main-content-inner">
-            <header class="codrops-header">
-              <h1>Tyler Palmer<span>Futuristic Web Developer</span></h1>
-            </header>
-            <button id="sidebar-button" data-effect="st-effect-2">Slide in on top</button>
+
+            <section class="side-column left-side-column">
+                <a id="sidebar-button" class="menu-button" data-effect="st-effect-2"><i class="fa fa-3x fa-th-large"></i></a>
+            </section>
+
+            <section class="center-column">
+              <header class="home-header">
+                <h1>Tyler <span class=light-heading>Palmer</span></h1>
+                <h4>Futuristic Web Developer</h4>
+              </header>
+              <div class="down-button">
+                <a href="" class="down-button-link"><i class="fa fa-4x fa-angle-down"></i></a>
+              </div>
+            </section>
+
+
+
+            <section class="side-column right-side-column">
+              <div class="main-social">
+                <a href="" class="social-link"><i class="fa social-icon fa-3x fa-github"></i></a>
+                <a href="" class="social-link"><i class="fa social-icon fa-3x fa-linkedin"></i></a>
+                <a href="" class="social-link"><i class="fa social-icon fa-3x fa-facebook"></i></a>
+              </div>
+            </section>
+
           </div><!--for main-content-inner wrapper-->
         </div><!--for main-content wrapper-->
       </div><!--pusher-->
