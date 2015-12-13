@@ -19,9 +19,47 @@ body, a {
 	font-weight: 300;
 }
 
-body {
-	background-color: #77dd77;
+/* style a - background-color animation */
+
+/*body, .pusher {
+	animation: colorchange 70s alternate infinite;
+  -webkit-animation: colorchange 50s alternate infinite;
 }
+
+@keyframes colorchange
+	{
+	  0%   {background: #2D8632;}
+	  25%  {background: #0D4A4D;}
+	  50%  {background: #EDA200;}
+	  75%  {background: #9F232D;}
+	  100% {background: #2D8632;}
+	}
+
+@-webkit-keyframes colorchange */ /* Safari and Chrome - necessary duplicate */ /*
+	{
+		0%   {background: #2D8632;}
+	  25%  {background: #0D4A4D;}
+	  50%  {background: #EDA200;}
+	  75%  {background: #9F232D;}
+	  100% {background: #2D8632;}
+	}*/
+
+/* style b - photo background + flat gray sidebar */
+
+.body-container {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+		),
+		url('../img/earth_from_space_2_small.jpg') no-repeat;
+	background-attachment: fixed;
+}
+
+.sidebar {
+	background-color: #D3D3D3;
+}
+
 
 a:hover {
 	color: green;
@@ -37,33 +75,44 @@ a:hover {
 .sidebar {
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: -125px;
 	z-index: 10;
 	display: none;
-	width: 150px;
+	width: 125px;
 	height: 100%;
 }
 
-	.sidebar .menu-link {
+	.home-menu-link, .menu-link {
 		display: block;
-		height: 23%;
 		border-bottom: 1px solid #F0F0F0;
-		text-align: center;
-		padding-top: 27%;
 		text-transform: uppercase;
 		font-weight: 300;
+		text-align: center;
 	}
 
-.menu-social {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	padding-top: 8%;
-}
+	.sidebar .menu-link {
+		padding: 18% 10%;
+	}
 
-	.menu-social a {
+	.home-menu-link {
+		padding: 10%;
+	}
+
+	.sidebar .menu-link-text {
+		margin: 10px auto 0 auto;
+	}
+
+	.menu-social {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		padding: 8% 0;
+		height: 12%;
+	}
+
+	/*.menu-social a {
 		margin: 0 11px;
-	}
+	}*/
 
 /* ---- MAIN CONTENT ---- */
 
@@ -72,7 +121,7 @@ a:hover {
 .pusher {
 	position: relative;
 	z-index: 20;
-	background-color: #77dd77;
+	/*background-color: #77dd77;*/
 }
 
 .main-content,
@@ -101,16 +150,19 @@ a:hover {
 		padding-top: 21%;
 	}
 
-		#sidebar-button {
-			height: 42px;
-			width: 42px;
-			border-radius: 5px;
-			background-color: #F0F0F0;
+		.menu-button {
+			width: 52px;
+			height: 52px;
 		}
 
-			#sidebar-button:hover {
-				background-color: green;
-			}
+		.menu-button-box {
+			height: 20px;
+			width: 20px;
+			margin: 2px;
+			border-radius: 5px;
+			float: left;
+			background-color: #F0F0F0;
+		}
 
 	.right-side-column {
 		padding-top: 15%;
