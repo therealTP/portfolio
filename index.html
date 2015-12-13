@@ -10,13 +10,9 @@
     <meta name="author" content="Tyler Palmer" />
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
-
 
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,20 +21,20 @@
   <body>
     <div class="body-container" id="body-container">
 
-      <nav class="sidebar st-effect-2" id="sidebar">
-        <a href="#bio" class="menu-button">
+      <nav class="sidebar" id="sidebar">
+        <a href="#bio" class="menu-link">
           <i class="fa fa-book fa-3x"></i>
           <p class="menu-button-text">Bio</p>
         </a>
-        <a href="#skills" class="menu-button">
+        <a href="#skills" class="menu-link">
           <i class="fa fa-rocket fa-3x"></i>
           <p class="menu-button-text">Skills</p>
         </a>
-        <a href="#projects" class="menu-button">
+        <a href="#projects" class="menu-link">
           <i class="fa fa-folder-o fa-3x"></i>
           <p class="menu-button-text">Projects</p>
         </a>
-        <a href="#contact" class="menu-button">
+        <a href="#contact" class="menu-link">
           <i class="fa fa-send-o fa-3x"></i>
           <p class="menu-button-text">Contact</p>
         </a>
@@ -56,39 +52,50 @@
             <section class="side-column left-side-column">
                 <a class="menu-button" data-effect="st-effect-2">
                     <div id="sidebar-button">
-
                     </div>
                   <!--<i class="fa fa-3x fa-th-large"></i>-->
                 </a>
             </section>
 
             <section class="center-column">
-              <header class="home-header">
-                <h1>Tyler <span class=light-heading>Palmer</span></h1>
-                <h4>Futuristic Web Developer</h4>
-              </header>
-              <div class="down-button">
-                <a href="" class="down-button-link"><i class="fa fa-4x fa-angle-down"></i></a>
+              <div id="home" class="center-content-section">
+                <div class="section-wrapper">
+                  <h1>Tyler <span class=light-heading>Palmer</span></h1>
+                  <h4>Futuristic Web Developer</h4>
+                </div>
+                <div class="down-button">
+                  <a href="" class="down-button-link"><i class="fa fa-4x fa-angle-down"></i></a>
+                </div>
               </div>
-              <div class="center-content-section">
+              <div id="bio" class="center-content-section">
                 <h1 class="section-heading">BIO</h1>
                 <div class="content-placeholder">CONTENT</div>
+                <div class="down-button">
+                  <a href="" class="down-button-link"><i class="fa fa-4x fa-angle-down"></i></a>
+                </div>
               </div>
-              <div class="center-content-section">
-                <h1 class="section-heading">BIO</h1>
+              <div id="skills" class="center-content-section">
+                <h1 class="section-heading">SKILLS</h1>
                 <div class="content-placeholder">CONTENT</div>
+                <div class="down-button">
+                  <a href="" class="down-button-link"><i class="fa fa-4x fa-angle-down"></i></a>
+                </div>
               </div>
-              <div class="center-content-section">
-                <h1 class="section-heading">BIO</h1>
+              <div id="projects" class="center-content-section">
+                <h1 class="section-heading">PROJECTS</h1>
                 <div class="content-placeholder">CONTENT</div>
+                <div class="down-button">
+                  <a href="" class="down-button-link"><i class="fa fa-4x fa-angle-down"></i></a>
+                </div>
               </div>
-              <div class="center-content-section">
-                <h1 class="section-heading">BIO</h1>
+              <div id="contact" class="center-content-section">
+                <h1 class="section-heading">CONTACT</h1>
                 <div class="content-placeholder">CONTENT</div>
+                <div class="down-button">
+                  <a href="" class="up-button-link"><i class="fa fa-4x fa-angle-up"></i></a>
+                </div>
               </div>
             </section>
-
-
 
             <section class="side-column right-side-column">
               <div class="main-social">
@@ -105,8 +112,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/classie.js"></script>
-		<script src="js/sidebarEffects.js"></script>
+		<script src="js/animations.js"></script>
 
   </body>
 </html>
