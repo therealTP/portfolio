@@ -1,12 +1,20 @@
 $(document).ready(function() {
 
   //---FUNCTIONS---//
-  // set sidebar height to initial viewport height
-  var initWinHeight = $(window).height;
+  // set initial heights
+  function setInitialHeights() {
+    // get initial window height
+    var initWinHeight = $(window).height;
 
-  $('.sidebar').height(initWinHeight);
-  $('.sidebar-link').height(initWinHeight * 0.2);
-  $('.home-menu-link, .menu-social').height(initWinHeight * 0.1);
+    // set element heights accordingly
+    $('.sidebar, .center-content-section').height(initWinHeight);
+    $('.sidebar-link').height(initWinHeight * 0.2);
+    $('.home-menu-link, .menu-social').height(initWinHeight * 0.1);
+  }
+
+  // call immediately
+  setInitialHeights();
+
   // func to rotate items, added to jquery obj (borrowed)
   $.fn.animateRotate = function(angle, duration, easing, complete) {
     var args = $.speed(duration, easing, complete);
@@ -26,25 +34,93 @@ $(document).ready(function() {
     $(this).toggleClass('white-border-left');
   }
 
-  // reusable scroll animation function
-
-  function toggleMenu() {
-    if (menuHidden) { // if menu is hidden
-      $('.right-side-column').hide('fade', 300); // hide social
-      $('.pusher').animate({left: '125px'}, {duration: 500, start: toggleBorder});
-      $('.sidebar').animate({left: '0px'}, 500, 'swing'); // add left border and move right
-      $('.down-button').animate({left: '60%'}, 500);
-    } else { // if menu is not hidden
-      $( '.pusher').animate({left: '0px'}, 500, 'swing', toggleBorder);
-      $('.sidebar').animate({left: '-125px'}, 500, 'swing');
-      $( '.right-side-column').show('fade', 700);
-      $('.down-button').animate({left: '47.75%'}, 500);
-    }
-    menuHidden = !menuHidden;
+  // CLOSURES //
+  function toggleNameHeadingClosure() {
+    var hidden = false;
+    return function() {
+      // $('.name-link').toggleClass('hidden');
+      if (hidden === false) {
+        $('.name-link').animate({opacity: 0}, 100);
+      } else {
+        $('.name-link').animate({opacity: 1}, 400);
+      }
+      hidden = !hidden; // switch hidden status
+    };
   }
 
+  var toggleNameHeader = toggleNameHeadingClosure();
+
+  // reusable scroll animation function
+
+  function toggleMenuClosure() {
+    var menuHidden = true; // hidden by default
+    return function() {
+      if (menuHidden) { // if menu is hidden
+        $('.right-side-column').hide('fade', 300); // hide social
+        $('.pusher').animate({left: '125px'}, {duration: 500, start: toggleBorder});
+        $('.sidebar').animate({left: '0px'}, 500, 'swing'); // add left border and move right
+        $('.down-button').animate({left: '60%'}, 500);
+      } else { // if menu is not hidden
+        $( '.pusher').animate({left: '0px'}, 500, 'swing', toggleBorder);
+        $('.sidebar').animate({left: '-125px'}, 500, 'swing');
+        $( '.right-side-column').show('fade', 700);
+        $('.down-button').animate({left: '47.75%'}, 500);
+      }
+      menuHidden = !menuHidden; // swich menuhidden status
+    };
+  }
+  var toggleMenu = toggleMenuClosure();
+
+  // closure to store current page location
+  function currentLocationClosure() {
+    var currentLocation = '#home'; //default location is home
+    return function(newLocation) {
+      if (newLocation) { // if newlocation arg passed in
+        currentLocation = newLocation; // set curr location to new location
+        // clear highlight color from all menu buttons
+        // add highlight class to current location menu button
+      }
+      return currentLocation; // return currlocation;
+    };
+  }
+
+  // call this function to get current page location, or change/get new location
+  var currentLocation = currentLocationClosure();
+
+  function activateMenuLink(menuLinkId) {
+    $('.menu-link, .home-menu-link').removeClass('active-section');
+    $(menuLinkId).addClass('active-section');
+  }
+
+  // element to get scroll location of section (target heading)
+  function getScrollLoc(elemSelect) {
+    var scrollLoc = $(elemSelect).offset();
+    return scrollLoc;
+  }
+
+  // event listener for whenever a scroll occurs, to activate menu item based on position
+  $(window).on('scroll', function() {
+    // get current location
+    var currLoc = $(document).scrollTop();
+    // get location of each element (target the header)
+    var bioLoc = getScrollLoc('#bio');
+    var skillsLoc = getScrollLoc('#skills');
+    var projLoc = getScrollLoc('#projects');
+    var contLoc = getScrollLoc('#contact');
+
+    console.log(currLoc, bioLoc, skillsLoc, projLoc, contLoc);
+    // if (currLoc < getScrollLoc('#bio .section-heading')) {
+    //   activateMenuLink('#home-menu-link');
+    // } else if (currLoc > 350 && currLoc < 984) {
+    //   activateMenuLink('#bio-menu-link');
+    // } else if (currLoc > 984)
+    //   activateMenuLink('#skills-menu-link');
+    // }
+  });
+
+
+
   // when main menu button is clicked on:
-  var menuHidden = true; // default, menu hidden
   var hoverColor = 'green';
   $( ".menu-button" ).on({
     click: function() {
@@ -69,12 +145,12 @@ $(document).ready(function() {
   $('.menu-link').on('click', function(e) {
     e.preventDefault(); // prevent default action from event
 
-    var target = this.hash; // retreive location of section target
+    var target = currentLocation(this.hash); // retreive location of section target & update currentLocation closure var
     var $target = $(target);
     var topOfElem = $target.offset().top;  // get position of target relative to window
 
     //use scroll top animation to scroll to element at position, close menu after
-    $('body').animate({'scrollTop': topOfElem}, 900, 'swing',     toggleMenu);
+    $('body').animate({'scrollTop': topOfElem}, {duration: 900, start: toggleNameHeader, complete: toggleMenu, always: toggleNameHeader});
 
   });
 
@@ -84,14 +160,17 @@ $(document).ready(function() {
     // determine next section & location
     var position = $(this).closest('.center-content-section').next().offset().top;
     console.log(position);
+    toggleNameHeader();
     // scroll to the next section
 
-    $('body').animate({'scrollTop': position}, 900, 'swing');
+    $('body').animate({'scrollTop': position}, 900, 'swing', toggleNameHeader);
   });
 
   $('.up-button a').on('click', function(e) {
     e.preventDefault();
-    $('body').animate({'scrollTop': 0}, 1200, 'swing');
+    toggleNameHeader(); // remove name headers for scroll up
+    $('body').animate({'scrollTop': 0}, 1200, 'swing', toggleNameHeader);
+ // add name headers after scroll complete
   });
 
   $('.home-menu-link').on('click', function(e) {

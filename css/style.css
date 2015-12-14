@@ -21,7 +21,7 @@ body, a {
 
 /* style a - background-color animation */
 
-/*body, .pusher {
+body, .pusher {
 	animation: colorchange 70s alternate infinite;
   -webkit-animation: colorchange 50s alternate infinite;
 }
@@ -42,11 +42,11 @@ body, a {
 	  50%  {background: #EDA200;}
 	  75%  {background: #9F232D;}
 	  100% {background: #2D8632;}
-	}*/
+	}
 
 /* style b - photo background + flat gray sidebar */
 
-.body-container {
+/*.body-container {
 	background:
 		linear-gradient(
 			rgba(0, 0, 0, 0.5),
@@ -57,8 +57,8 @@ body, a {
 }
 
 .sidebar {
-	background-color: #D3D3D3;
-}
+	background-color: #8B8B83;
+}*/
 
 
 a:hover {
@@ -110,10 +110,6 @@ a:hover {
 		height: 12%;
 	}
 
-	/*.menu-social a {
-		margin: 0 11px;
-	}*/
-
 /* ---- MAIN CONTENT ---- */
 
 /* 'pusher' class = main content getting pushed by sidebar */
@@ -121,7 +117,6 @@ a:hover {
 .pusher {
 	position: relative;
 	z-index: 20;
-	/*background-color: #77dd77;*/
 }
 
 .main-content,
@@ -153,6 +148,10 @@ a:hover {
 		.menu-button {
 			width: 52px;
 			height: 52px;
+		}
+
+		.active-section {
+			color: green;
 		}
 
 		.menu-button-box {
@@ -188,7 +187,9 @@ a:hover {
 }
 
 .center-content-section {
-	margin-bottom: 20%;
+	position: relative;
+	margin-bottom: 10%;
+	padding-top: 1.5%;
 }
 	#contact {
 		margin-bottom: 2%;
@@ -211,12 +212,24 @@ a:hover {
 		margin: 20px auto;
 	}
 
-	.down-button {
+	.center-content-section h5 {
+		font-size: 28px;
+		margin: 0 auto 1.5% auto;
+	}
+		.light-heading {
+			font-weight: 200;
+		}
+
+		.hidden {
+			visibility: hidden;
+		}
+
+	.down-button, .up-button {
 		margin: 10px auto;
 	}
 
 	.content-placeholder {
 		border: 2px solid white;
 		border-radius: 5px;
-		height: 400px;
+		height: 450px;
 	}
