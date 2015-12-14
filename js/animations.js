@@ -4,10 +4,11 @@ $(document).ready(function() {
   // set initial heights
   function setInitialHeights() {
     // get initial window height
-    var initWinHeight = $(window).height;
+    var initWinHeight = $(window).height();
+    console.log(initWinHeight);
 
     // set element heights accordingly
-    $('.sidebar, .center-content-section').height(initWinHeight);
+    $('.sidebar, .side-column, .center-content-section').height(initWinHeight);
     $('.sidebar-link').height(initWinHeight * 0.2);
     $('.home-menu-link, .menu-social').height(initWinHeight * 0.1);
   }
@@ -94,7 +95,7 @@ $(document).ready(function() {
 
   // element to get scroll location of section (target heading)
   function getScrollLoc(elemSelect) {
-    var scrollLoc = $(elemSelect).offset();
+    var scrollLoc = $(elemSelect).offset().top - 25;
     return scrollLoc;
   }
 
@@ -104,18 +105,22 @@ $(document).ready(function() {
     var currLoc = $(document).scrollTop();
     // get location of each element (target the header)
     var bioLoc = getScrollLoc('#bio');
-    var skillsLoc = getScrollLoc('#skills');
+    var skilLoc = getScrollLoc('#skills');
     var projLoc = getScrollLoc('#projects');
     var contLoc = getScrollLoc('#contact');
 
-    console.log(currLoc, bioLoc, skillsLoc, projLoc, contLoc);
-    // if (currLoc < getScrollLoc('#bio .section-heading')) {
-    //   activateMenuLink('#home-menu-link');
-    // } else if (currLoc > 350 && currLoc < 984) {
-    //   activateMenuLink('#bio-menu-link');
-    // } else if (currLoc > 984)
-    //   activateMenuLink('#skills-menu-link');
-    // }
+    // console.log(currLoc, bioLoc, skillsLoc, projLoc, contLoc);
+    if (currLoc < bioLoc) {
+      activateMenuLink('#home-menu-link');
+    } else if (currLoc > bioLoc && currLoc < skilLoc) {
+      activateMenuLink('#bio-menu-link');
+    } else if (currLoc > skilLoc && currLoc < projLoc) {
+      activateMenuLink('#skills-menu-link');
+    } else if (currLoc > projLoc && currLoc < contLoc) {
+      activateMenuLink('#projects-menu-link');
+    } else if (currLoc > contLoc) {
+      activateMenuLink('#contact-menu-link');
+    }
   });
 
 
