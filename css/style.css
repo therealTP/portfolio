@@ -6,9 +6,8 @@
 }
 
 html,
-body,
-.body-container,
-.main-content {
+body {
+	height: 100%;
 	overflow-x: hidden;
 }
 
@@ -19,70 +18,7 @@ body, a {
 	font-weight: 300;
 }
 
-/* Effect 1: Brackets */
-.menu-link-text::before,
-.menu-link-text::after {
-	display: inline-block;
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
-	transition: transform 0.3s, opacity 0.2s;
-}
-
-.menu-link-text::before {
-	margin-right: 10px;
-	content: '[';
-	-webkit-transform: translateX(20px);
-	-moz-transform: translateX(20px);
-	transform: translateX(20px);
-}
-
-.menu-link-text::after {
-	margin-left: 10px;
-	content: ']';
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
-	transform: translateX(-20px);
-}
-
-.menu-link-text:hover::before,
-.menu-link-text:hover::after,
-.menu-link-text:focus::before,
-.menu-link-text:focus::after {
-	opacity: 1;
-	-webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
-	transform: translateX(0px);
-}
-
-/* style a - background-color animation */
-
-body, .pusher {
-	animation: colorchange 70s alternate infinite;
-  -webkit-animation: colorchange 70s alternate infinite;
-}
-
-@keyframes colorchange
-	{
-	  0%   {background: #2D8632;}
-	  25%  {background: #0D4A4D;}
-	  50%  {background: #EDA200;}
-	  75%  {background: #9F232D;}
-	  100% {background: #2D8632;}
-	}
-
-@-webkit-keyframes colorchange */ /* Safari and Chrome - necessary duplicate */ /*
-	{
-		0%   {background: #2D8632;}
-	  25%  {background: #0D4A4D;}
-	  50%  {background: #EDA200;}
-	  75%  {background: #9F232D;}
-	  100% {background: #2D8632;}
-	}
-
-/* style b - photo background + flat gray sidebar */
-
-/*.body-container {
+body {
 	background:
 		linear-gradient(
 			rgba(0, 0, 0, 0.5),
@@ -92,175 +28,75 @@ body, .pusher {
 	background-attachment: fixed;
 }
 
-.sidebar {
-	background-color: #8B8B83;
-}*/
+/*header*/
 
-.body-container {
-	position: relative;
-	/*overflow-x: hidden;*/
-}
-
-/* ----SIDEBAR MENU---- */
-
-.sidebar {
+header {
+	width: 100%;
+	height: 60px;
+	background-color: gray;
+	color: white;
 	position: fixed;
-	top: 0;
-	left: -125px;
-	z-index: 10;
-	display: none;
-	width: 125px;
-	height: 100%;
 }
 
-	.home-menu-link, .menu-link {
-		display: block;
-		border-bottom: 1px solid #F0F0F0;
-		text-transform: uppercase;
-		font-weight: 300;
+	#headerLogo {
+		display: inline;
+		font-size: 40px;
+		margin-left: 30px;
+	}
+
+	#mainNav {
+		float: right;
+		margin: 0 40px;
+	}
+
+		#mainNav ul {
+			margin: 10px;
+		}
+
+		#mainNav li {
+			display: inline;
+			text-decoration: none;
+			margin-left: 50px;
+		}
+
+/*main content*/
+#mainContentWrapper {
+	height: 100%;
+	position: absolute;
+	/*overflow-x: hidden;*/
+	width: 100%;
+}
+
+.contentSection {
+	width: 100%;
+}
+
+	/*home*/
+	#homeHeadingBox {
 		text-align: center;
+		margin: 250px auto;
+		width: 30%;
+
 	}
 
-	.sidebar .menu-link {
-		padding: 18% 10%;
-	}
 
-	.home-menu-link {
-		padding: 10%;
-	}
+/*footer*/
 
-	.sidebar .menu-link-text {
-		margin: 10px auto 0 auto;
-	}
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
 
-	.menu-social {
+	#socialBox {
+		margin: 0 auto;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-around;
-		padding: 8% 0;
-		height: 12%;
+		justify-content: center;
 	}
 
-/* ---- MAIN CONTENT ---- */
-
-/* 'pusher' class = main content getting pushed by sidebar */
-
-.pusher {
-	position: relative;
-	z-index: 20;
-}
-
-.main-content,
-.main-content-inner {
-	position: relative;
-}
-
-/*set up inner main content wrapper as flex box*/
-.main-content-inner {
-	display: flex;
-	flex-flow: row nowrap;
-}
- /* class to add when menu slides out */
-.white-border-left {
-	border-left: 1px solid white;
-}
-
-/*side columns that hold fixed menu button & social icons*/
-.side-column {
-	flex-grow: 1;
-	position: fixed;
-}
-
-	.left-side-column {
-		padding-left: 30px;
-		padding-top: 21%;
-	}
-
-		.menu-button {
-			width: 52px;
-			height: 52px;
+		#socialBox li {
+			display: inline;
+			text-decoration: none;
+			margin: 0 10px;
 		}
-
-		.active-section {
-			color: green;
-		}
-
-		.menu-button-box {
-			height: 20px;
-			width: 20px;
-			margin: 2px;
-			border-radius: 5px;
-			float: left;
-			background-color: #F0F0F0;
-		}
-
-	.right-side-column {
-		padding-top: 15%;
-		padding-right: 30px;
-		right: 0;
-		top: 0;
-	}
-
-		.main-social {
-			display: flex;
-			flex-flow: column nowrap;
-			align-items: center;
-			justify-content: space-between;
-			height: 200px;
-		}
-
-/*main central column that holds all main content*/
-.center-column {
-	flex-grow: 12;
-	text-align: center;
-	padding: 10% 10% 0% 10%;
-	text-transform: uppercase;
-}
-
-.center-content-section {
-	position: relative;
-	margin-bottom: 10%;
-	padding-top: 1.5%;
-}
-	#contact {
-		margin-bottom: 2%;
-	}
-
-	/*section 1 - home*/
-	#home .section-wrapper {
-		border-top: 1px solid #F0F0F0;
-		border-bottom: 1px solid #F0F0F0;
-		margin: 6% 2%;
-	}
-
-	.center-column h1 {
-		font-size: 100px;
-		margin: 0 auto;
-	}
-
-	.center-column h4 {
-		font-size: 36px;
-		margin: 20px auto;
-	}
-
-	.center-content-section h5 {
-		font-size: 28px;
-		margin: 0 auto 1.5% auto;
-	}
-		.light-heading {
-			font-weight: 200;
-		}
-
-		.hidden {
-			visibility: hidden;
-		}
-
-	.down-button, .up-button {
-		margin: 10px auto;
-	}
-
-	.content-placeholder {
-		border: 2px solid white;
-		border-radius: 5px;
-		height: 450px;
-	}
