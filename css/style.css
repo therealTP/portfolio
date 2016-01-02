@@ -5,18 +5,16 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
-	height: 100%;
-	overflow-x: hidden;
-}
-
 body, a {
   color: #F0F0F0;
 	text-decoration: none;
 	font-family: Roboto, sans-serif;
 	font-weight: 300;
 }
+
+	a:hover {
+		color: red;
+	}
 
 body {
 	background:
@@ -31,11 +29,10 @@ body {
 /*header*/
 
 header {
-	width: 100%;
 	height: 60px;
 	background-color: gray;
-	color: white;
-	position: fixed;
+	position: relative;
+	z-index: 100; /*needs to be on top for links to work*/
 }
 
 	#headerLogo {
@@ -44,40 +41,37 @@ header {
 		margin-left: 30px;
 	}
 
-	#mainNav {
+	#menuContainer {
 		float: right;
 		margin: 0 40px;
+		z-index: 50;
 	}
 
-		#mainNav ul {
+		#mainNav {
 			margin: 10px;
 		}
 
 		#mainNav li {
 			display: inline;
-			text-decoration: none;
 			margin-left: 50px;
 		}
 
 /*main content*/
-#mainContentWrapper {
-	height: 100%;
+#mainContent {
 	position: absolute;
-	/*overflow-x: hidden;*/
-	width: 100%;
-}
-
-.contentSection {
-	width: 100%;
+	top: 60px;
+	padding: 0 50px;
 }
 
 	/*home*/
 	#homeHeadingBox {
 		text-align: center;
 		margin: 250px auto;
-		width: 30%;
-
 	}
+
+		#homeHeadingBox h1 {
+			font-size: 75px;
+		}
 
 
 /*footer*/
@@ -94,6 +88,10 @@ footer {
 		flex-flow: row nowrap;
 		justify-content: center;
 	}
+
+		#socialBox ul {
+			padding: 0;
+		}
 
 		#socialBox li {
 			display: inline;
