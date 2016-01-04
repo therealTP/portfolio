@@ -17,13 +17,13 @@ body, a {
 	}
 
 body {
-	background:
+	/*background:
 		linear-gradient(
 			rgba(0, 0, 0, 0.5),
 			rgba(0, 0, 0, 0.5)
 		),
-		url('../img/earth_from_space_2_small.jpg') no-repeat;
-	background-attachment: fixed;
+		url('../img/earth_from_space_2.jpg') no-repeat;
+	background-attachment: fixed;*/
 }
 
 /*header*/
@@ -37,7 +37,7 @@ header {
 
 	#headerLogo {
 		display: inline;
-		font-size: 40px;
+		font-size: 5vw;
 		margin-left: 30px;
 	}
 
@@ -48,7 +48,9 @@ header {
 	}
 
 		#mainNav {
-			margin: 10px;
+			height: 60px;
+			margin: 0;
+			padding: 12px;
 		}
 
 		#mainNav li {
@@ -56,14 +58,34 @@ header {
 			margin-left: 50px;
 		}
 
+		.active-menu {
+			color: green;
+		}
+
+@media (max-width: 730px) {
+	/*#headerLogo {
+		font-size: 16px;
+	}*/
+}
+
 /*main content*/
 #mainContent {
 	position: absolute;
 	top: 60px;
-	padding: 0 50px;
+	padding: 0;
 }
 
 	/*home*/
+	#home {
+		background:
+			linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
+			),
+			url('../img/veil-nebula.jpg') no-repeat;
+			background-position: center;
+	}
+
 	#homeHeadingBox {
 		text-align: center;
 		margin: 250px auto;
@@ -72,6 +94,23 @@ header {
 		#homeHeadingBox h1 {
 			font-size: 75px;
 		}
+
+	.slide-section {
+		padding: 0 50px;
+	}
+	.color-fill {
+		background-color: #d3d3d3;
+	}
+
+	/*skills*/
+	#skills {
+		background:
+			linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
+			),
+			url('../img/earth_from_space_2.jpg') no-repeat;
+	}
 
 
 /*footer*/
