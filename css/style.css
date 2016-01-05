@@ -16,35 +16,32 @@ body, a {
 		color: red;
 	}
 
-body {
-	/*background:
-		linear-gradient(
-			rgba(0, 0, 0, 0.5),
-			rgba(0, 0, 0, 0.5)
-		),
-		url('../img/earth_from_space_2.jpg') no-repeat;
-	background-attachment: fixed;*/
-}
-
 /*header*/
 
 header {
+	position: fixed;
 	height: 60px;
-	background-color: gray;
-	position: relative;
-	z-index: 100; /*needs to be on top for links to work*/
+	width: 100%;
+	z-index: 100; /*needs to be on top for links to be clickable*/
 }
 
 	#headerLogo {
 		display: inline;
-		font-size: 5vw;
+		font-size: 35px;
+		line-height: 60px;
 		margin-left: 30px;
 	}
 
-	#menuContainer {
+	#socialBox {
 		float: right;
+		width: 30%;
+		height: 60px;
 		margin: 0 40px;
 		z-index: 50;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-around;
 	}
 
 		#mainNav {
@@ -55,23 +52,19 @@ header {
 
 		#mainNav li {
 			display: inline;
-			margin-left: 50px;
+			margin-left: 30px;
 		}
 
 		.active-menu {
 			color: green;
 		}
 
-@media (max-width: 730px) {
-	/*#headerLogo {
-		font-size: 16px;
-	}*/
-}
+
 
 /*main content*/
 #mainContent {
 	position: absolute;
-	top: 60px;
+	top: 120px;
 	padding: 0;
 }
 
@@ -88,18 +81,36 @@ header {
 
 	#homeHeadingBox {
 		text-align: center;
-		margin: 250px auto;
+		margin: 2% auto;
 	}
 
 		#homeHeadingBox h1 {
 			font-size: 75px;
+			line-height: 75px;
+			margin: 10px auto;
+		}
+
+		#homeHeadingBox h3 {
+			font-size: 30px;
+			font-weight: 200;
+			margin: 10px auto;
+		}
+
+		@media (max-width: 650px) {
+			#headerLogo {
+				font-size: 24px;
+			}
+
+			#homeHeadingBox h1 {
+				font-size: 50px;
+			}
 		}
 
 	.slide-section {
 		padding: 0 50px;
 	}
 	.color-fill {
-		background-color: #d3d3d3;
+		background-color: gray;
 	}
 
 	/*skills*/
@@ -112,6 +123,17 @@ header {
 			url('../img/earth_from_space_2.jpg') no-repeat;
 	}
 
+	/*contact*/
+	#contact {
+		background:
+			linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
+			),
+			url('../img/hubble_img_1.jpg') no-repeat;
+			background-position: center;
+	}
+
 
 /*footer*/
 
@@ -121,19 +143,10 @@ footer {
 	bottom: 0px;
 }
 
-	#socialBox {
-		margin: 0 auto;
+	#mainNav{
+		margin: 10px auto;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: center;
+		justify-content: space-between;
+		width: 380px;
 	}
-
-		#socialBox ul {
-			padding: 0;
-		}
-
-		#socialBox li {
-			display: inline;
-			text-decoration: none;
-			margin: 0 10px;
-		}

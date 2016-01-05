@@ -4,12 +4,14 @@ $(document).ready(function(){
       slideSelector: '.slide-section',
       loopHorizontal: false,
       anchors: ['main-content'],
-      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      onSlideLeave: function(anchorLink, index, slideIndex, nextSlideIndex){
         // remove active class from any menu item
         $('#mainNav a').removeClass('active-menu');
         // add active class to correct menu item
-        if (slideIndex > 0) {
-          $('#mainNav li:nth-Child(' + slideIndex + ') a').addClass('active-menu');
+        if (nextSlideIndex === 'right') {
+          $('#mainNav li:nth-Child(' + (slideIndex + 1) + ') a').addClass('active-menu');
+        } else if (nextSlideIndex === 'left') {
+          $('#mainNav li:nth-Child(' + (slideIndex - 1) + ') a').addClass('active-menu');
         }
       }
   });
