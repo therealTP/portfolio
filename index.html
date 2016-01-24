@@ -11,16 +11,18 @@
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
   </head>
   <body>
     <!--START HEADER-->
     <header>
       <p id="headerLogo">
-        <a href="#main-content">TYLER PALMER</a>
+        <a class="section-link" data-target="home" href="#home">TYLER PALMER</a>
       </p>
+
+      <!-- <button class="prev-slide">Prev slide!</button>
+      <button class="next-slide">Next slide!</button> -->
       <div id="socialBox">
         <div class="socialIcon"><a><i class="fa fa-linkedin fa-2x"></i></a></div>
         <div class="socialIcon"><a><i class="fa fa-github fa-2x"></i></a></div>
@@ -30,43 +32,49 @@
     </header>
     <!--END HEADER-->
     <!--START MAIN CONTENT-->
-    <div id="mainContent" data-anchor="main-content">
-        <div id="home" class="slide-section">
-          <div id="homeHeadingBox">
-            <h1>FUTURISTIC</h1>
-            <h3>WEB DEVELOPER</h3>
-            <h5>To take your project to new heights.</h5>
-          </div>
+    <nav class="nav-arrow-box">
+      <div><a class="prev-slide"><i class="fa fa-angle-left fa-4x"></i></a></div>
+      <div><a class="next-slide"><i class="fa fa-angle-right fa-4x"></i></a></div>
+    </nav>
+
+    <div id="main-content-wrapper" data-anchor="main-content">
+
+      <div id="home" class="slide-section photo-section active-section">
+        <div id="homeHeadingBox">
+          <h1>FUTURISTIC</h1>
+          <h3>WEB DEVELOPER</h3>
+          <h5>To take your project to new heights.</h5>
         </div>
-        <div id="bio" class="slide-section color-fill">
-          <h2>fullPage.js</h2>
-          <h3>This is the second slide</h3>
-          <p class="end">Thank you!</p>
-        </div>
-        <div id="skills" class="slide-section">
-          <h2>fullPage.js</h2>
-          <h3>This is the third slide</h3>
-          <p class="end">Thank you!</p>
-        </div>
-        <div id="work" class="slide-section color-fill">
-          <h2>fullPage.js</h2>
-          <h3>This is the fourth slide</h3>
-          <p class="end">Thank you!</p>
-        </div>
-        <div id="contact" data-anchor="contact-section" class="slide-section">
-          <h2>fullPage.js</h2>
-          <h3>This is the fifth slide</h3>
-          <p class="end">Thank you!</p>
-        </div>
+      </div>
+      <div id="bio" class="slide-section color-fill">
+        <h2>BIO</h2>
+        <h3>This is the second slide</h3>
+        <p class="end">Thank you!</p>
+      </div>
+      <div id="skills" class="slide-section photo-section">
+        <h2>SKILLS</h2>
+        <h3>This is the third slide</h3>
+        <p class="end">Thank you!</p>
+      </div>
+      <div id="work" class="slide-section color-fill">
+        <h2>WORK</h2>
+        <h3>This is the fourth slide</h3>
+        <p class="end">Thank you!</p>
+      </div>
+      <div id="contact" class="slide-section photo-section">
+        <h2>CONTACT</h2>
+        <h3>This is the fifth slide</h3>
+        <p class="end">Thank you!</p>
+      </div>
     </div>
     <!--END MAIN CONTENT-->
     <!--START FOOTER-->
     <footer id="footerContainer">
       <div id="mainNav">
-        <div class="navIcon"><a href="#main-content/1"><i class="fa fa-book fa-2x"></i></a></div>
-        <div class="navIcon"><a href="#main-content/2"><i class="fa fa-rocket fa-2x"></i></a></div>
-        <div class="navIcon"><a href="#main-content/3"><i class="fa fa-folder-open-o fa-2x"></i></a></div>
-        <div class="navIcon"><a href="#main-content/4"><i class="fa fa-envelope-o fa-2x"></i></a></div>
+        <div class="navIcon"><a class="section-link" data-target="bio" href="#bio"><i class="fa fa-book fa-2x"></i></a></div>
+        <div class="navIcon"><a class="section-link" data-target="skills" href="#skills"><i class="fa fa-rocket fa-2x"></i></a></div>
+        <div class="navIcon"><a class="section-link" data-target="work" href="#work"><i class="fa fa-folder-open-o fa-2x"></i></a></div>
+        <div class="navIcon"><a class="section-link" data-target="contact" href="#contact"><i class="fa fa-envelope-o fa-2x"></i></a></div>
       </div>
     </footer>
 

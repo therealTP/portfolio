@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: gray;
+	overflow-x: hidden;
+}
+
 body, a {
   color: #F0F0F0;
 	text-decoration: none;
@@ -59,13 +64,25 @@ header {
 			color: green;
 		}
 
+.nav-arrow-box {
+	position: fixed;
+	right: 30px;
+	top: 40%;
+	z-index: 60;
+}
 
-
-/*main content*/
-#mainContent {
+.slide-section {
 	position: absolute;
-	top: 120px;
-	padding: 0;
+	top: 0; bottom: 0; left: 100vw; right: -100vw;
+	display: inline-block;
+}
+
+#home {
+	left: 0; right: 0;
+}
+
+.photo-section {
+	z-index: 50;
 }
 
 	/*home*/
@@ -107,10 +124,11 @@ header {
 		}
 
 	.slide-section {
-		padding: 0 50px;
+		padding: 100px 50px;
 	}
 	.color-fill {
 		background-color: gray;
+		z-index: 20;
 	}
 
 	/*skills*/
@@ -134,13 +152,13 @@ header {
 			background-position: center;
 	}
 
-
 /*footer*/
 
 footer {
 	width: 100%;
 	position: fixed;
 	bottom: 0px;
+	z-index: 100;
 }
 
 	#mainNav{
