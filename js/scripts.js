@@ -1,138 +1,96 @@
 $(document).ready(function(){
 
-  function nextSlide() {
-    var $activeSlide = $('.active-section');
-    var activeSlideId = $activeSlide.attr('id');
-    console.log(activeSlideId);
-    if (activeSlideId !== 'contact') { // can't go right of contact slide
-      var $nextSlide = $activeSlide.next('.slide-section');
-      var nextSlideId = $nextSlide.attr('id');
-      $('.active-section').removeClass('active-section');
-      console.log(nextSlideId);
-      // at same time:
-      // animate active slide to left, w/ duration/easing settings
-      $activeSlide.animate({
-        left: "100vw",
-        right: "-100vw"
-      }, {
-        start: function() {
-          $('.active-section').removeClass('active-section'); // make all sections inactive
-        },
-        duration: 1200, // custom for each. get options by id
-        easing: 'swing'
-      });
+  // animation properties
+  var inDeckPos = {left: '100vw', right: '-100vw'};
+  var inViewPos = {left: 0, right: 0};
+  var timeOut = 800;
+  var timeIn = 800;
+  var easeOut = 'swing';
+  var easeIn = 'swing';
 
-      $nextSlide.animate({
-        left: 0, // these are same for all: need to bring next slide into view
-        right: 0
-      }, {
-        start: function() {
-          $(this).addClass('active-section'); // when done, make new section active
-        },
-        duration: 1000,
-        easing: 'swing'
-      });
+  // util functions
+  function deactivateAll() {
+    $('.active-section').removeClass('active-section');
+  }
+
+  // fired when slide changes. creates custom event 'newActive'
+  function activateCard(card) {
+    card.addClass('active-section').trigger('newActive');
+  }
+
+  // nav functions
+  function goToCard(targetId) {
+    var $activeSlide = $('.active-section');
+    // block attempts to nav to current slide
+    if($activeSlide.attr('id') !== targetId) {
+      var $targetSlide = $('#' + targetId);
+      // if nav to same type of slide, e.g. photo-section to photo-section:
+      if (($activeSlide.hasClass('photo-section') && $targetSlide.hasClass('photo-section')) || ($activeSlide.hasClass('color-fill') && $targetSlide.hasClass('color-fill'))) {
+        // successive animation
+        $activeSlide.animate(inDeckPos, {
+          start: deactivateAll,
+          done: function() {
+            activateCard($targetSlide);
+            $targetSlide.animate(inViewPos, {
+              duration: timeIn,
+              easing: easeIn
+            });
+          },
+          duration: timeOut,
+          easing: easeOut
+        });
+      } else { // if nav to different type of slide
+        // simulateous animation
+        $activeSlide.animate(inDeckPos, {
+          start: deactivateAll,
+          duration: timeOut,
+          easing: easeOut
+        });
+        $targetSlide.animate(inViewPos, {
+          start: activateCard.bind(null, $targetSlide),
+          duration: timeIn,
+          easing: easeIn
+        });
+      }
+    }
+  }
+
+  function nextSlide() {
+    var activeSlideId = $('.active-section').attr('id');
+    if (activeSlideId !== 'contact') { // can't go right of contact slide
+      var nextSlideId = $('.active-section').next('.slide-section').attr('id');
+      goToCard(nextSlideId);
     }
   }
 
   function prevSlide() {
-    var $activeSlide = $('.active-section');
-    var activeSlideId = $activeSlide.attr('id');
+    var activeSlideId = $('.active-section').attr('id');
     if (activeSlideId !== "home") { // can't go left of home slide
-      var $prevSlide = $activeSlide.prev('.slide-section');
-      var prevSlideId = $prevSlide.attr('id');
-      // at same time:
-      // animate active slide to left, w/ duration/easing settings
-      $activeSlide.animate({
-        left: "100vw",
-        right: "-100vw"
-      }, {
-        start: function() {
-          $('.active-section').removeClass('active-section');
-        },
-        duration: 1200, // custom for each. get options by id
-        easing: 'swing'
-      });
-
-      $prevSlide.animate({
-        left: 0, // these are same for all: need to bring next slide into view
-        right: 0
-      }, {
-        done: function() {
-          $(this).addClass('active-section');
-        },
-        duration: 800,
-        easing: 'swing'
-      });
+      var prevSlideId = $('.active-section').prev('.slide-section').attr('id');
+      goToCard(prevSlideId);
     }
   }
 
+  // event listeners
+  // forward/back arrows
+  $('a.next-slide').on('click', nextSlide);
+  $('a.prev-slide').on('click', prevSlide);
+
+  // nav links
   $('a.section-link').on('click', function(e) {
     e.preventDefault();
     var id = $(this).attr('data-target');
     goToCard(id);
   });
 
-  function goToCard(targetId) {
-    var $activeSlide = $('.active-section');
-    var $targetSlide = $('#' + targetId);
-    $activeSlide.animate({
-      left: "100vw",
-      right: "-100vw"
-      }, {
-      start: function() {
-        $('.active-section').removeClass('active-section');
-      },
-      duration: 600, // custom for each. get options by id
-      easing: 'swing'
-    });
-    $targetSlide.animate({
-      left: 0,
-      right: 0
-    }, {
-      start: function() {$targetSlide.addClass('active-section');}
-    });
-    // $activeSlide.animate({
-    //   left: "100vw",
-    //   right: "-100vw"
-    //   }, {
-    //   start: function() {
-    //     $('.active-section').removeClass('active-section');
-    //   },
-    //   duration: 600, // custom for each. get options by id
-    //   easing: 'swing',
-    //   done: function() {
-    //     $targetSlide.addClass('active-section');
-    //     $targetSlide.animate({
-    //       left: 0,
-    //       right: 0
-    //     });
-    //   }
-    // });
-  }
-    // else {
-    // $activeSlide.animate({
-    //   left: "100vw",
-    //   right: "-100vw"
-    //   }, {
-    //   start: function() {
-    //     $('.active-section').removeClass('active-section');
-    //   },
-    //   duration: 600, // custom for each. get options by id
-    //   easing: 'swing'
-    // });
-    // $targetSlide.animate({
-    //   left: 0,
-    //   right: 0
-    // });
-    // }
-  // }
+  // nav link highlighting, uses custom event from activateCard fcn
+  $('body').on('newActive', function() {
+    $('i.nav-active').removeClass('nav-active');
+    var activeId = $('.active-section').attr('id');
+    $('.nav-icon[id="' + activeId + '-nav"] i').addClass('nav-active');
+  });
 
-  // event listeners for forward/back arrows
-  $('a.next-slide').on('click', nextSlide);
-  $('a.prev-slide').on('click', prevSlide);
-
-  // add event listener for mousewheel
+  // mousewheel
   $('body').bind('mousewheel DOMMouseScroll', function(e){
     // if
     if ($('.slide-section:animated').length > 0) {
@@ -147,7 +105,7 @@ $(document).ready(function(){
     }
   });
 
-  // event listener for left/right keypresses
+  // left/right keypresses
   $('body').on('keydown', function(e) {
     if ($('.slide-section:animated').length > 0) {
       e.preventDefault();
@@ -160,4 +118,23 @@ $(document).ready(function(){
     }
   });
 
+  $(function(){
+    $(".live-type").typed({
+      strings: ['FUTURISTIC', 'GAME CHANGING', 'POLISHED', 'DETERMINED', 'PROFESSIONAL', 'INDUSTRIOUS'],
+      typeSpeed: 175,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true,
+      showCursor: false
+    });
+  });
+
+  // skills animation
+  // $(".skill-category").on('click', function() {
+  //   var d = 0;
+  //   $(".skill-box").each(function() {
+  //     $(this).delay(d).fadeIn(1000);
+  //     d += 1000;
+  //   });
+  // });
 });
