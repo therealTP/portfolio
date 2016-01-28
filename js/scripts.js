@@ -120,7 +120,7 @@ $(document).ready(function(){
 
   $(function(){
     $(".live-type").typed({
-      strings: ['FUTURISTIC', 'GAME CHANGING', 'POLISHED', 'DETERMINED', 'PROFESSIONAL', 'INDUSTRIOUS'],
+      strings: ['FUTURISTIC', 'GAME CHANGING', 'POLISHED', 'DETERMINED', 'COACHABLE', 'INDUSTRIOUS'],
       typeSpeed: 175,
       backSpeed: 50,
       backDelay: 1000,
@@ -129,12 +129,4 @@ $(document).ready(function(){
     });
   });
 
-  // skills animation
-  // $(".skill-category").on('click', function() {
-  //   var d = 0;
-  //   $(".skill-box").each(function() {
-  //     $(this).delay(d).fadeIn(1000);
-  //     d += 1000;
-  //   });
-  // });
 });

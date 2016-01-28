@@ -12,21 +12,22 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <!--START HEADER-->
     <header>
       <p id="headerLogo">
-        <a class="section-link" data-target="home" href="#home">TYLER PALMER</a>
+        <a class="section-link" data-target="home" href="#home"><span class="bold-heading">TYLER </span>PALMER</a>
       </p>
 
       <!-- <button class="prev-slide">Prev slide!</button>
       <button class="next-slide">Next slide!</button> -->
       <div id="socialBox">
-        <div class="socialIcon"><a><i class="fa fa-linkedin fa-2x"></i></a></div>
-        <div class="socialIcon"><a><i class="fa fa-github fa-2x"></i></a></div>
-        <div class="socialIcon"><a><i class="fa fa-facebook fa-2x"></i></a></div>
+        <a href="#"><div class="social-icon"><i class="fa fa-linkedin"></i></div></a>
+        <div class="social-icon"><a><i class="fa fa-github"></i></a></div>
+        <div class="social-icon"><a><i class="fa fa-facebook"></i></a></div>
       </div>
 
     </header>
@@ -52,118 +53,149 @@
         <h2>BIO</h2>
       </div>
       <div id="skills" class="slide-section photo-section">
-        <div class="skills-heading">
-          MY SKILLS, to name a few.
-        </div>
-        <div class="skills-grid">
-          <div class="skill-category">LANGUAGES</div>
-          <div class="skill-category">FRAMEWORKS<br> & LIBRARIES</div>
-          <div class="skill-category">SERVER &<br> DATABASE</div>
-          <div class="skill-category">OTHER <br>TOOLS</div>
-        </div>
-        <div class="skills-panel">
-          <div class="skills-column languages-column">
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
-              </div>
-              <p>JAVASCRIPT</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
-              </div>
-              <p>PYTHON</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
-              </div>
-              <p>HTML</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
-              </div>
-              <p>CSS</p>
-            </div>
+        <div class="skills-content">
+          <div class="skills-heading">
+            <h2>MY SKILLS</h2>
+            <!-- <p>
+              To name a few.
+            </p> -->
           </div>
-          <div class="skills-column languages-column">
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
+          <div class="skills-column-container">
+            <div class="skills-column skills-1">
+              <div class="skills-column-heading">
+                <div>
+                  LANGUAGUES
+                </div>
               </div>
-              <p>JAVASCRIPT</p>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-javascript-outline"></i>
+                </div>
+                <p>JAVASCRIPT</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-python"></i>
+                </div>
+                <p>PYTHON</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-html5-outline"></i>
+                </div>
+                <p>HTML</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-css3-outline"></i>
+                </div>
+                <p>CSS</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="fa fa-database fa-3x"></i>
+                </div>
+                <p>SQL</p>
+              </div>
             </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
+            <div class="skills-column skills-2">
+              <div class="skills-column-heading">
+                <div>
+                  LIBRARIES & <br> FRAMEWORKS
+                </div>
               </div>
-              <p>PYTHON</p>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-angular-outline"></i>
+                </div>
+                <p>ANGULAR</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <img class="icon-image" src="img/react-logo.png" alt="" />
+                </div>
+                <p>REACT</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <img class="icon-image" src="img/jquery-logo.png" alt="" />
+                </div>
+                <p>JQUERY</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <img class="icon-image" src="img/bootstrap-logo.png" alt="" />
+                </div>
+                <p>BOOTSTRAP</p>
+              </div>
             </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
+            <div class="skills-column skills-3">
+              <div class="skills-column-heading">
+                <div>
+                  SERVER & <br> DATABASE
+                </div>
               </div>
-              <p>HTML</p>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-nodejs"></i>
+                </div>
+                <p>NODE.JS</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="fa fa-server fa-1"></i>
+                </div>
+                <p>EXPRESS</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-leaf"></i>
+                </div>
+                <p>MONGODB</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <img class="icon-image" src="img/mysql-logo.png" alt="" />
+                </div>
+                <p>MYSQL</p>
+              </div>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-fireball"></i>
+                </div>
+                <p>FIREBASE</p>
+              </div>
             </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
+            <div class="skills-column skills-4">
+              <div class="skills-column-heading">
+                <div>
+                  OTHER TOOLS
+                </div>
               </div>
-              <p>CSS</p>
-            </div>
-          </div>
-          <div class="skills-column languages-column">
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-merge"></i>
+                </div>
+                <p>GIT</p>
               </div>
-              <p>JAVASCRIPT</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-sass"></i>
+                </div>
+                <p>SASS</p>
               </div>
-              <p>PYTHON</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-social-wordpress-outline"></i>
+                </div>
+                <p>WORDPRESS</p>
               </div>
-              <p>HTML</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
+              <div class="skill-box">
+                <div class="icon-box">
+                  <i class="ion-android-cloud-outline"></i>
+                </div>
+                <p>AWS</p>
               </div>
-              <p>CSS</p>
-            </div>
-          </div>
-          <div class="skills-column languages-column">
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
-              </div>
-              <p>JAVASCRIPT</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
-              </div>
-              <p>PYTHON</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-html5 fa-3x"></i>
-              </div>
-              <p>HTML</p>
-            </div>
-            <div class="skill-box">
-              <div class="icon-box">
-                <i class="fa fa-css3 fa-3x"></i>
-              </div>
-              <p>CSS</p>
             </div>
           </div>
         </div>
@@ -180,8 +212,8 @@
     <footer id="footerContainer">
       <div id="mainNav">
         <div id="bio-nav" class="nav-icon"><a class="section-link" data-target="bio" href="#bio"><i class="fa fa-book fa-2x"></i></a></div>
-        <div id="skills-nav" class="nav-icon"><a class="section-link" data-target="skills" href="#skills"><i class="fa fa-rocket fa-2x"></i></a></div>
-        <div id="work-nav" class="nav-icon"><a class="section-link" data-target="work" href="#work"><i class="fa fa-folder-open-o fa-2x"></i></a></div>
+        <div id="skills-nav" class="nav-icon"><a class="section-link" data-target="skills" href="#skills"><i class="fa fa-tasks fa-2x"></i></a></div>
+        <div id="work-nav" class="nav-icon"><a class="section-link" data-target="work" href="#work"><i class="fa fa-briefcase fa-2x"></i></a></div>
         <div id="contact-nav" class="nav-icon"><a class="section-link" data-target="contact" href="#contact"><i class="fa fa-envelope-o fa-2x"></i></a></div>
       </div>
     </footer>
