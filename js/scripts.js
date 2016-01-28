@@ -120,13 +120,29 @@ $(document).ready(function(){
 
   $(function(){
     $(".live-type").typed({
-      strings: ['FUTURISTIC', 'GAME CHANGING', 'POLISHED', 'DETERMINED', 'COACHABLE', 'INDUSTRIOUS'],
+      strings: ['FUTURISTIC', 'POLISHED', 'TENACIOUS', 'COACHABLE', 'INDUSTRIOUS'],
       typeSpeed: 175,
       backSpeed: 50,
       backDelay: 1000,
       loop: true,
       showCursor: false
     });
+  });
+
+  // show/hide extra pages on skills mobile view
+
+  $('#skills-page-1, #skills-page-2').on('click', function() {
+    if ($(this).attr('id') === 'skills-page-1') {
+      $('#skills-1, #skills-2').removeClass('hidden-skills');
+      $('#skills-page-1').addClass('active-skills-page');
+      $('#skills-3, #skills-4').addClass('hidden-skills');
+      $('#skills-page-2').removeClass('active-skills-page');
+    } else {
+      $('#skills-1, #skills-2').addClass('hidden-skills');
+      $('#skills-page-1').removeClass('active-skills-page');
+      $('#skills-3, #skills-4').removeClass('hidden-skills');
+      $('#skills-page-2').addClass('active-skills-page');
+    }
   });
 
 });

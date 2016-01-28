@@ -161,7 +161,40 @@ header {
 
 	#bio {
 		z-index: 40;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
+
+		.bio-content {
+			max-width: 65%;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: space-around;
+			border: 1px solid #F0F0F0;
+			padding: 20px;
+		}
+
+			.bio-photo {
+				width: 30%;
+				height: auto;
+			}
+
+			.bio-text {
+				margin-left: 20px;
+			}
+
+				.bio-text h1 {
+					font-size: 50px;
+					font-weight: 300;
+					margin: 0px auto;
+				}
+
+				.bio-text p {
+					font-size: 16px;
+				}
+
 
 	/*skills*/
 	#skills {
@@ -178,8 +211,6 @@ header {
 		align-items: center;
 	}
 
-
-
 			.skills-content {
 				width: 100%;
 				display: flex;
@@ -187,7 +218,7 @@ header {
 			}
 
 			.skills-heading {
-				width: 18%;
+				width: 15%;
 				font-size: 30px;
 				align-self: center;
 				margin-right: 10px;
@@ -200,6 +231,7 @@ header {
 				}
 
 				.skills-column-container {
+					width: 85%;
 					display: flex;
 					flex-flow: row nowrap;
 					align-items: center;
@@ -248,6 +280,10 @@ header {
 						margin-left: 5px;
 					}
 
+		.mobile-skills-page-links {
+			display: none;
+		}
+
 	#work {
 		z-index: 20;
 	}
@@ -289,42 +325,119 @@ footer {
 
 	.skills-content {
 		flex-flow: column nowrap;
-		align-items: space-around;
+		/*align-items: space-around;*/
 	}
 
+	.skills-heading {
+		width: 100%;
+	}
+
+		.skills-heading h2 {
+			margin-bottom: 25px;
+		}
+
+	.skills-column-container {
+		width: 100%;
+	}
+
+		.skill-box i {
+			font-size: 28px;
+		}
+
+		.skill-box p {
+			margin: 15px;
+			margin-left: 7px;
+			font-size: 20px;
+		}
+}
+
+@media screen and (max-width: 875px) {
+
+		.skills-heading {
+			width: 100%;
+			font-size: 24px;
+		}
+
+			.skills-heading h2 {
+				margin-bottom: 10px;
+			}
+
+		.skills-column-container {
+			width: 100%;
+			flex-flow: row wrap;
+		}
+
+			.skills-column {
+				width: 45%;
+				align-self: flex-start;
+			}
+
+			.skills-column-heading {
+				height: 40px;
+			}
+
+			.skill-box .icon-image {
+				width: 25px;
+			}
+
 	.skill-box i {
-		font-size: 28px;
+		font-size: 22px;
 	}
 
 	.skill-box p {
-		margin: 15px;
-		font-size: 20px;
+		font-size: 16px;
+		margin: 5px;
+	}
+
+	#skills-1, #skills-3 {
+		order: 1;
+		margin-bottom: 10px;
+	}
+
+	#skills-2, #skills-4 {
+		order: 2;
 	}
 }
 
-@media screen and (max-width: 550px) {
-	header {
-		padding: 0 20px;
+@media screen and (max-width: 600px) {
+	#skills {
+		padding-right: 30px;
+		padding-top: 70px;
 	}
 
-	/*skills page*/
-	.skills-content {
-		flex-flow: column nowrap;
+	.skills-heading {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 40px 0 5px;
 	}
-		.skills-heading {
-			width: 100%;
+
+		.skills-heading h2 {
+			font-size: 24px;
 		}
 
-		.skills-column {
-			width: 80%;
-			margin-right: 0;
+		.active-skills-page {
+			font-weight: bold;
 		}
 
-		.skills-2, .skills-3, .skills-4 {
-			display: none;
-		}
+	.skills-column-container {
+		margin-left: 0;
+	}
 
-	#mainNav {
-		width: 300px;
+	.skills-column {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 40px;
+	}
+
+	.mobile-skills-page-links {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+
+	.hidden-skills {
+		display: none;
 	}
 }
