@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'flex';
+
+.arrow-nav-container {
+  position: fixed;
+  top: 0; bottom: 0; right: 0;
+  padding-right: $slide-lr-pad;
+  @extend .flex-section;
+  flex-flow: column nowrap;
+  justify-content: center;
+  z-index: $arrow-nav-z;
+
+  .arrow-box i {
+    margin: $arrow-tb-marg auto;
+  }
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+  width: 100%;
+  padding: 0 $header-lr-padding;
+  height: $header-height;
+	z-index: $header-z;
+  @extend .flex-section;
+  justify-content: center;
+
+  #mainNav{
+    // height: $header-height;
+    width: $main-nav-width;
+    @extend .flex-section;
+    justify-content: space-between;
+    .nav-active {
+      color: $nav-active;
+    }
+  }
+}

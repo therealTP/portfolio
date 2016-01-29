@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" initial-scale=1.0>
     <title>Tyler Palmer | Web Developer</title>
     <meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
     <meta name="keywords" content="web-developer, javascript, jquery, html, web-design, web-apps, css" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
     <!--START HEADER-->
@@ -21,15 +21,11 @@
       <p id="headerLogo">
         <a class="section-link" data-target="home" href="#home"><span class="bold-heading">TYLER </span>PALMER</a>
       </p>
-
-      <!-- <button class="prev-slide">Prev slide!</button>
-      <button class="next-slide">Next slide!</button> -->
       <div id="socialBox">
         <a href="#"><div class="social-icon"><i class="fa fa-linkedin"></i></div></a>
-        <div class="social-icon"><a><i class="fa fa-github"></i></a></div>
-        <div class="social-icon"><a><i class="fa fa-facebook"></i></a></div>
+        <a href="#"><div class="social-icon"><i class="fa fa-github"></i></div></a>
+        <a href="#"><div class="social-icon"><i class="fa fa-facebook"></i></div></a>
       </div>
-
     </header>
     <!--END HEADER-->
     <!--START MAIN CONTENT-->
@@ -43,23 +39,38 @@
     <div id="main-content-wrapper">
 
       <div id="home" class="slide-section photo-section active-section">
-        <div id="homeHeadingBox">
+        <div id="home-heading-box">
           <h1 class="live-type"></h1>
           <h3>WEB DEVELOPER</h3>
-          <h4>TAKE YOUR PROJECT TO NEW HEIGHTS.</h4>
+          <p>TAKE YOUR PROJECT TO NEW HEIGHTS</p>
         </div>
       </div>
-      <div id="bio" class="slide-section color-fill">
+      <div id="bio" class="slide-section flex-section color-fill">
         <div class="bio-content">
-          <img class="bio-photo" src="img/bio-photo.jpg" alt=""/>
-          <div class="bio-text">
+          <div class="bio-top-content">
+            <img class="bio-photo" src="img/bio-photo.jpg" alt=""/>
             <h1><span class="bold-heading">MUCH</span> OBLIGED</h1>
-            <p>
+          </div>
+          <div class="timeline-menu">
+            <div class="timeline-square" data-target="la"></div>
+            <div class="timeline-square" data-target="college"></div>
+            <div class="timeline-square" data-target="business"></div>
+            <div class="timeline-square" data-target="tech"></div>
+            <div class="timeline-square" data-target="bootcamp"></div>
+          </div>
+          <div class="main-bio-text">
+            <div class="timeline-event active-event"><p>Hi! I'm Tyler. Click on the timeline squares above to get to know me.</p></div>
+            <div id="la" class="timeline-event"><h3>LA</h3></div>
+            <div id="college" class="timeline-event"><h3>COLLEGE</h3></div>
+            <div id="business" class="timeline-event"><h3>BUSINESS</h3></div>
+            <div id="tech" class="timeline-event"><h3>TECH</h3></div>
+            <div id="bootcamp" class="timeline-event"><h3>BOOTCAMP</h3></div>
+            <!-- <p>
               My name is Tyler and I was born and raised in California. After college, I spent over two years in the San Francisco tech industry and fell in love with coding.
             </p>
             <p>
               I have a passion for politics, the environment, and music. You can often find me snowboarding, playing poker, or dreaming up ways to change the world.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -67,11 +78,6 @@
         <div class="skills-content">
           <div class="skills-heading">
             <h2>MY SKILLS</h2>
-            <div class="mobile-skills-page-links">
-              <a id="skills-page-1" class="active-skills-page" href="#">PAGE 1</a>
-              -
-              <a id="skills-page-2" href="#">PAGE 2</a>
-            </div>
           </div>
           <div class="skills-column-container">
             <div id="skills-1" class="skills-column">
@@ -210,7 +216,11 @@
                 <p>AWS</p>
               </div>
             </div>
-
+          </div>
+          <div class="mobile-skills-page-links">
+            <a id="skills-page-1" class="active-skills-page" href="#">PAGE 1</a>
+            <span class="link-dash">-</span>
+            <a id="skills-page-2" href="#">PAGE 2</a>
           </div>
         </div>
       </div>

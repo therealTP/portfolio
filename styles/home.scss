@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'flex';
+
+#home {
+  left: 0; right: 0; // default in-view slide
+  justify-content: center;
+  z-index: $home-z;
+  background:
+    linear-gradient($home-gradient, $home-gradient),
+    url('../img/veil-nebula.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#home-heading-box {
+  text-align: center;
+  margin-left: $arrow-nav-extra-pad;
+
+  .live-type {
+    height: $live-type-height;
+    font-size: $live-type-height;
+    line-height: $live-type-height;
+    margin: $live-type-tb-marg auto;
+  }
+
+  h3 {
+    font-size: $home-h3-size;
+    font-weight: $light-font-weight;
+    margin: $live-type-tb-marg auto;
+  }
+
+  p {
+    font-size: $home-p-size;
+  }
+}
+
+@media (max-width: 650px) {
+  #home-heading-box {
+    .live-type {
+      font-size: $home-heading-size-mobile;
+    }
+  }
+}

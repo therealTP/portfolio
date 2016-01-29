@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'flex';
+
+#bio {
+  z-index: $bio-z;
+  @extend .flex-section;
+  justify-content: center;
+}
+
+.bio-content {
+  align-self: stretch;
+  margin: 15px auto;
+  width: 100%;
+  @extend .flex-section;
+  flex-flow: column nowrap;
+  // justify-content: space-between;
+  border: $master-border;
+  padding: 20px;
+
+  .bio-top-content {
+    flex-grow: 1;
+    @extend .flex-section;
+
+    .bio-photo {
+      width: 30%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 300;
+      margin: 0px 15px;
+    }
+  }
+
+  .timeline-menu {
+    flex-grow: 1;
+    width: 100%;
+    @extend .flex-section;
+    justify-content: space-between;
+
+    .timeline-square {
+      height: $social-icon-width;
+      width: $social-icon-width;
+      border: $master-border
+    }
+
+    .current-square {
+      background-color: $text-color;
+    }
+  }
+
+  .main-bio-text {
+    flex-grow: 4;
+    @extend .flex-section;
+    .timeline-event {
+      display: none;
+    }
+
+    .active-event {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

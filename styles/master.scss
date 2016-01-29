@@ -1,0 +1,47 @@
+@import 'variables';
+@import 'flex';
+
+*,
+*:after,
+*::before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $body-background-color;
+	overflow-x: hidden;
+  margin: 0;
+
+  .slide-section {
+  	position: absolute;
+    @extend .flex-section;
+  	top: 0; bottom: 0; left: 100vw; right: -100vw;
+  	padding: $slide-tb-pad $slide-lr-pad;
+    padding-right: $slide-lr-pad + $arrow-nav-extra-pad;
+  }
+
+  .color-fill {
+    background-color: gray;
+  }
+
+  .bold-heading {
+    font-weight: $bold-heading-font-weight;
+  }
+}
+
+body, a {
+	color: $text-color;
+	text-decoration: none;
+	font-family: Roboto, sans-serif;
+	font-weight: $main-font-weight;
+}
+
+a:active, a:focus {
+  outline: none;
+}
+
+a:hover {
+  color: $link-hover-color;
+  cursor: pointer;
+}

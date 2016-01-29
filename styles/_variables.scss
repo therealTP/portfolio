@@ -1,0 +1,67 @@
+// colors
+$body-background-color: #424242;
+$text-color: #F0F0F0;
+$link-hover-color: red;
+$nav-active: green;
+$home-gradient: rgba(0, 0, 0, 0.6);
+
+// fonts
+$main-font-weight: 300;
+$light-font-weight: 200;
+$bold-heading-font-weight: 500;
+$skills-heading-font-weight: 400;
+$desktop-logo-font-size: 35px;
+$mobile-logo-font-size: 24px;
+$home-heading-size-mobile: 50px;
+$home-h3-size: 36px;
+$home-p-size: 20px;
+$skills-heading-size: 32px;
+$skill-column-heading-size: 20px;
+$skill-box-tablet-icon-size: 28px;
+$skill-box-tablet-p-size: 20px;
+$skill-box-mobile-p-size: 16px;
+$skills-page-links-size: 18px;
+$skills-i-size: 32px;
+$skills-i-size-mobile: 22px;
+$skills-p-size: 22px;
+
+// z-index
+$header-z: 100;
+$social-z: 60;
+$arrow-nav-z: 60;
+$home-z: 50;
+$bio-z: 40;
+$skills-z: 30;
+$work-z: 20;
+$contact-z: 10;
+
+// dimensions
+$header-height: 70px;
+$social-icon-width: 44px;
+$main-nav-width: 380px;
+$live-type-height: 75px;
+$tablet-skills-heading-height: 12vh;
+$mobile-skills-heading-height: 12vh;
+$skills-column-heading-tablet-height: 40px;
+$skill-i-box-width: 40px;
+$skill-i-box-width-mobile: 25px;
+$skill-i-img-width: 38px;
+
+// padding & margin
+$slide-tb-pad: 60px;
+$slide-lr-pad: 30px;
+$header-lr-padding: 30px;
+$social-icon-padding: 5px;
+$social-icon-l-margin: 15px;
+$arrow-nav-extra-pad: 40px;
+$arrow-tb-marg: 15px;
+$nav-tb-marg: 10px;
+$live-type-tb-marg: 10px;
+$skills-column-pad: 10px;
+$skills-p-l-marg: 7px;
+$skills-mobile-p-l-marg: 5px;
+$skills-mobile-tb-marg: 8px;
+
+//border
+$master-border: 1px solid $text-color;
+$hover-border: 1px solid red;

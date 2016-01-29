@@ -1,0 +1,447 @@
+.flex-section, #bio, .bio-content, .bio-content .bio-top-content, .bio-content .timeline-menu, .bio-content .main-bio-text {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+#bio {
+  z-index: 40;
+  justify-content: center;
+}
+
+.bio-content {
+  align-self: stretch;
+  margin: 15px auto;
+  width: 100%;
+  flex-flow: column nowrap;
+  border: 1px solid #F0F0F0;
+  padding: 20px;
+}
+
+.bio-content .bio-top-content {
+  flex-grow: 1;
+}
+
+.bio-content .bio-top-content .bio-photo {
+  width: 30%;
+  height: auto;
+}
+
+.bio-content .bio-top-content h1 {
+  font-size: 34px;
+  font-weight: 300;
+  margin: 0px 15px;
+}
+
+.bio-content .timeline-menu {
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.bio-content .timeline-menu .timeline-square {
+  height: 44px;
+  width: 44px;
+  border: 1px solid #F0F0F0;
+}
+
+.bio-content .timeline-menu .current-square {
+  background-color: #F0F0F0;
+}
+
+.bio-content .main-bio-text {
+  flex-grow: 4;
+}
+
+.bio-content .main-bio-text .timeline-event {
+  display: none;
+}
+
+.bio-content .main-bio-text .active-event {
+  display: flex;
+  align-items: center;
+}
+
+.flex-section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+#contact {
+  z-index: 10;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hubble_img_1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  padding: 0 30px;
+  z-index: 100;
+  /*needs to be on top for links to be clickable*/
+}
+
+header #headerLogo {
+  display: inline;
+  font-size: 35px;
+  line-height: 70px;
+}
+
+header #socialBox {
+  float: right;
+  height: 70px;
+  z-index: 60;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header #socialBox .social-icon {
+  margin-left: 15px;
+  width: 44px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #F0F0F0;
+  padding: 5px;
+}
+
+header #socialBox .social-icon:hover {
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 650px) {
+  header #headerLogo {
+    font-size: 24px;
+  }
+}
+
+.flex-section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+#home {
+  left: 0;
+  right: 0;
+  justify-content: center;
+  z-index: 50;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/veil-nebula.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#home-heading-box {
+  text-align: center;
+  margin-left: 40px;
+}
+
+#home-heading-box .live-type {
+  height: 75px;
+  font-size: 75px;
+  line-height: 75px;
+  margin: 10px auto;
+}
+
+#home-heading-box h3 {
+  font-size: 36px;
+  font-weight: 200;
+  margin: 10px auto;
+}
+
+#home-heading-box p {
+  font-size: 20px;
+}
+
+@media (max-width: 650px) {
+  #home-heading-box .live-type {
+    font-size: 50px;
+  }
+}
+
+.flex-section, body .slide-section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+*,
+*:after,
+*::before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #424242;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body .slide-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100vw;
+  right: -100vw;
+  padding: 60px 30px;
+  padding-right: 70px;
+}
+
+body .color-fill {
+  background-color: gray;
+}
+
+body .bold-heading {
+  font-weight: 500;
+}
+
+body, a {
+  color: #F0F0F0;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+a:active, a:focus {
+  outline: none;
+}
+
+a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.flex-section, .arrow-nav-container, footer, footer #mainNav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+.arrow-nav-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-right: 30px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  z-index: 60;
+}
+
+.arrow-nav-container .arrow-box i {
+  margin: 15px auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 30px;
+  height: 70px;
+  z-index: 100;
+  justify-content: center;
+}
+
+footer #mainNav {
+  width: 380px;
+  justify-content: space-between;
+}
+
+footer #mainNav .nav-active {
+  color: green;
+}
+
+.flex-section, .skills-content, .skills-content .skills-column-container, .skills-content .skills-column-container .skills-column .skills-column-heading, .skills-content .skills-column-container .skills-column .skill-box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+/*skills*/
+#skills {
+  z-index: 30;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/earth_from_space_2.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.skills-content {
+  width: 100%;
+}
+
+.skills-content .skills-heading {
+  width: 15%;
+  font-size: 32px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.skills-content .skills-heading h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.skills-content .skills-column-container {
+  width: 85%;
+  justify-content: center;
+}
+
+.skills-content .skills-column-container .skills-column {
+  border: 1px solid #F0F0F0;
+  padding: 10px;
+  padding-top: 0;
+  width: 25%;
+  margin-left: 10px;
+}
+
+.skills-content .skills-column-container .skills-column .skills-column-heading {
+  height: 70px;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.skills-content .skills-column-container .skills-column .skill-box {
+  text-align: center;
+}
+
+.skills-content .skills-column-container .skills-column .skill-box .icon-box {
+  width: 40px;
+}
+
+.skills-content .skills-column-container .skills-column .skill-box .icon-image {
+  width: 38px;
+}
+
+.skills-content .skills-column-container .skills-column .skill-box i {
+  font-size: 32px;
+}
+
+.skills-content .skills-column-container .skills-column .skill-box p {
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.skills-content .mobile-skills-page-links {
+  display: none;
+}
+
+@media screen and (max-width: 1060px) {
+  .skills-content {
+    flex-flow: column nowrap;
+    align-self: stretch;
+  }
+  .skills-content .skills-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+  }
+  .skills-content .skills-column-container {
+    width: 100%;
+  }
+  .skills-content .skills-column-container .skill-column .skill-box .icon-box i {
+    font-size: 28px;
+  }
+  .skills-content .skills-column-container .skill-column .skill-box p {
+    margin: 15px;
+    margin-left: 7px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .skills-content .skills-heading {
+    margin-right: 0;
+    height: 12vh;
+  }
+  .skills-content .skills-column-container {
+    flex-flow: row wrap;
+  }
+  .skills-content .skills-column-container .skills-column {
+    width: 45%;
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  .skills-content .skills-column-container .skills-column .skills-column-heading {
+    height: 40px;
+    font-size: 16px;
+  }
+  .skills-content .skills-column-container .skills-column .skill-box .icon-box i {
+    font-size: 22px;
+  }
+  .skills-content .skills-column-container .skills-column .skill-box .icon-box .icon-image {
+    width: 25px;
+  }
+  .skills-content .skills-column-container .skills-column .skill-box p {
+    font-size: 16px;
+    margin: 8px 5px;
+  }
+  .skills-content .skills-column-container #skills-1, .skills-content .skills-column-container #skills-3 {
+    order: 1;
+  }
+  .skills-content .skills-column-container #skills-2, .skills-content .skills-column-container #skills-4 {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills-content {
+    align-items: space-around;
+    padding-left: 40px;
+  }
+  .skills-content .skills-heading h2 {
+    font-size: 24px;
+  }
+  .skills-content .skills-column-container {
+    margin-left: 0;
+  }
+  .skills-content .skills-column-container .skills-column {
+    width: 100%;
+    margin-left: 0;
+  }
+  .skills-content .skills-column-container .skills-column .skill-box p {
+    margin: 7px 5px;
+  }
+  .skills-content .skills-column-container #skills-3 {
+    order: 2;
+  }
+  .skills-content .skills-column-container .hidden-skills {
+    display: none;
+  }
+  .skills-content .mobile-skills-page-links {
+    height: 12vh;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+  }
+  .skills-content .mobile-skills-page-links .link-dash {
+    margin: 0 7px;
+  }
+  .skills-content .mobile-skills-page-links .active-skills-page {
+    font-weight: 500;
+  }
+}
+
+.flex-section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  /*vertical alignment*/
+}
+
+#work {
+  z-index: 20;
+}

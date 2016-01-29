@@ -145,4 +145,15 @@ $(document).ready(function(){
     }
   });
 
-});
+  // show/hide timeline event, highlight square, based on which square is clicked
+  $('.timeline-square').on('click', function() {
+    if (!$(this).hasClass('.current-square')) {
+      $('.current-square').removeClass('current-square');
+      $('.timeline-event').removeClass('active-event');
+      $(this).addClass('current-square');
+      var target = $(this).attr('data-target');
+      $('#' + target).addClass('active-event');
+    }
+  });
+
+}); // END

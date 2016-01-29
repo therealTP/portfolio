@@ -1,0 +1,46 @@
+@import 'variables';
+
+header {
+	position: fixed;
+	height: $header-height;
+	width: 100%;
+	padding: 0 $header-lr-padding;
+	z-index: $header-z; /*needs to be on top for links to be clickable*/
+
+  #headerLogo {
+    display: inline;
+    font-size: $desktop-logo-font-size;
+    line-height: $header-height;
+  }
+
+  #socialBox {
+		float: right;
+		height: $header-height;
+		z-index: $social-z;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+
+    .social-icon {
+			margin-left: $social-icon-l-margin;
+			width: $social-icon-width;
+			text-align: center;
+			font-size: $mobile-logo-font-size;
+			border: $master-border;
+			padding: $social-icon-padding;
+		}
+
+		.social-icon:hover {
+			border: $hover-border;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	header {
+		#headerLogo {
+			font-size: $mobile-logo-font-size;
+		}
+	}
+}
