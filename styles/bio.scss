@@ -11,18 +11,20 @@
   align-self: stretch;
   margin: 15px auto;
   width: 100%;
+  max-width: 600px;
   @extend .flex-section;
   flex-flow: column nowrap;
-  // justify-content: space-between;
   border: $master-border;
   padding: 20px;
 
   .bio-top-content {
+    width: 100%;
     flex-grow: 1;
     @extend .flex-section;
-
     .bio-photo {
       width: 30%;
+      min-width: 100px;
+      max-width: 200px;
       height: auto;
     }
 
@@ -55,11 +57,23 @@
     @extend .flex-section;
     .timeline-event {
       display: none;
+      padding: 0 25px;
     }
 
     .active-event {
       display: flex;
       align-items: center;
     }
+
+    // #la {
+    //   background:
+    // 		// linear-gradient(
+    // 		// 	rgba(26, 26, 26, 0.4),
+    // 		// 	rgba(26, 26, 26, 0.4)
+    // 		// ),
+    // 		url('../img/hermosa.jpg') no-repeat;
+    // 	background-size: cover;
+    // 	background-position: center;
+    // }
   }
 }
