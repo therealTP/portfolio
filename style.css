@@ -243,7 +243,7 @@ header #socialBox .social-icon:hover {
   right: 0;
   justify-content: center;
   z-index: 50;
-  background: url("../img/veil-nebula.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/veil-nebula.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -290,10 +290,17 @@ header #socialBox .social-icon:hover {
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #424242;
-  position: relative;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
   margin: 0;
 }
