@@ -142,7 +142,7 @@
 
 #contact {
   z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/hubble_img_1.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/hubble_img_1.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -389,7 +389,7 @@ footer #mainNav .nav-active {
 /*skills*/
 #skills {
   z-index: 30;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/earth_from_space_2.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/earth_from_space_2.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
