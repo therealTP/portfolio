@@ -26,7 +26,6 @@ footer {
   justify-content: center;
 
   #mainNav{
-    // height: $header-height;
     width: $main-nav-width;
     @extend .flex-section;
     justify-content: space-between;
