@@ -16,7 +16,7 @@
   display: flex;
   flex-flow: column nowrap;
   border: 1px solid #F0F0F0;
-  padding: 20px;
+  padding: 15px;
 }
 
 .bio-content .bio-top-content {
@@ -25,14 +25,14 @@
 
 .bio-content .bio-top-content .bio-photo {
   width: 35%;
-  min-width: 150px;
+  min-width: 140px;
   max-width: 200px;
   height: auto;
   border: 1px solid gray;
 }
 
 .bio-content .bio-top-content .top-text-wrapper {
-  margin: 0 15px;
+  margin-left: 15px;
 }
 
 .bio-content .bio-top-content .top-text-wrapper h1 {
@@ -102,6 +102,9 @@
 }
 
 @media screen and (min-width: 730px) {
+  .bio-content {
+    padding: 20px;
+  }
   .bio-content .bio-top-content .top-text-wrapper .greeting-text-desktop {
     display: block;
   }
@@ -109,7 +112,7 @@
     display: none;
   }
   .bio-content .timeline-menu {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 5px;
   }
   .bio-content .timeline-menu .timeline-square {
@@ -139,9 +142,49 @@
 
 #contact {
   z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hubble_img_1.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/hubble_img_1.jpg") no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.contact-content {
+  margin: 5vh auto;
+}
+
+.contact-content h1 {
+  font-size: 42px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.contact-content .contact-info {
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+.contact-content .contact-info .contact-text {
+  margin-left: 15px;
+}
+
+.contact-content .text-form .form-group {
+  margin: 10px auto;
+}
+
+.contact-content .text-form .form-group .input-div {
+  margin-top: 10px;
+}
+
+.contact-content .text-form .form-group .input-div .contact-input {
+  border: 1px solid #F0F0F0;
+  background-color: transparent;
+  color: #F0F0F0;
+  width: 100%;
+  padding: 5px;
+}
+
+.contact-content .text-form .form-group .input-div textarea {
+  resize: none;
+  height: 200px;
 }
 
 header {

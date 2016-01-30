@@ -7,6 +7,7 @@ $nav-active: green;
 $home-gradient: rgba(0, 0, 0, 0.6);
 
 // fonts
+$primary-font: Roboto, sans-serif;
 $main-font-weight: 300;
 $light-font-weight: 200;
 $bold-heading-font-weight: 500;
@@ -46,7 +47,7 @@ $main-nav-width: 380px;
 $live-type-height: 75px;
 $bio-content-max-width: 750px;
 $bio-photo-width: 35%;
-$bio-photo-min-width: 150px;
+$bio-photo-min-width: 140px;
 $bio-photo-max-width: 200px;
 $bio-time-square-desktop-width: $social-icon-width + 10px;
 $tablet-skills-heading-height: 12vh;
@@ -67,7 +68,8 @@ $arrow-tb-marg: 15px;
 $nav-tb-marg: 10px;
 $live-type-tb-marg: 10px;
 $bio-text-h3-marg: 5px;
-$bio-content-padding: 20px;
+$bio-content-padding: 15px;
+$bio-content-padding-desktop: 20px;
 $skills-column-pad: 10px;
 $skills-p-l-marg: 7px;
 $skills-mobile-p-l-marg: 5px;

@@ -28,7 +28,7 @@
     }
 
     .top-text-wrapper {
-      margin: 0 $arrow-tb-marg;
+      margin-left: $arrow-tb-marg;
 
       h1 {
         margin: 0;
@@ -113,6 +113,7 @@
 
 @media screen and (min-width: 730px) {
   .bio-content {
+    padding: $bio-content-padding-desktop;
     .bio-top-content {
       .top-text-wrapper {
         .greeting-text-desktop {
