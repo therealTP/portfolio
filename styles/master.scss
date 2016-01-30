@@ -10,13 +10,13 @@
 
 body {
 	background-color: $body-background-color;
-	overflow-x: hidden;
+	overflow: hidden;
   margin: 0;
 
   .slide-section {
   	position: absolute;
     @extend .flex-section;
-  	top: 0; bottom: 0; left: 100vw; right: -100vw;
+  	top: 0; bottom: 0; left: 100%; right: -100%;
   	padding: $slide-tb-pad $slide-lr-pad;
     padding-right: $slide-lr-pad + $arrow-nav-extra-pad;
   }
