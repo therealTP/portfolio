@@ -9,7 +9,7 @@
     <meta name="keywords" content="web-developer, javascript, jquery, html, web-design, web-apps, css" />
     <meta name="author" content="Tyler Palmer" />
 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="screen" title="no title" charset="utf-8">
@@ -49,37 +49,54 @@
         <div class="bio-content">
           <div class="bio-top-content">
             <img class="bio-photo" src="img/bio-photo.jpg" alt=""/>
-            <h1><span class="bold-heading">MUCH</span> OBLIGED</h1>
+            <div class="top-text-wrapper">
+              <h1><span class="bold-heading">HOW</span> DO YOU DO?</h1>
+              <div class="greeting-text-desktop greeting-text">
+                Greetings! I'm Tyler. Want to get to know me? Click through the timeline boxes below to learn my story.
+              </div>
+            </div>
           </div>
-          <p>
-            Click the timeline boxes below to learn more about me.
-          </p>
+          <div class="greeting-text-mobile greeting-text">
+            Greetings! I'm Tyler. Want to get to know me? Click through the timeline boxes below to learn my story.
+          </div>
           <div class="timeline-menu">
-            <div class="timeline-square" data-target="la"></div>
-            <div class="timeline-square" data-target="college"></div>
-            <div class="timeline-square" data-target="business"></div>
-            <div class="timeline-square" data-target="tech"></div>
-            <div class="timeline-square" data-target="bootcamp"></div>
+            <div class="timeline-square" data-target="home-bio"><i class="fa fa-home"></i></div>
+            <div class="timeline-square" data-target="college"><i class="ion-university"></i></div>
+            <div class="timeline-square" data-target="business"><i class="fa fa-fax"></i></div>
+            <div class="timeline-square" data-target="tech"><i class="fa fa-building-o"></i></div>
+            <div class="timeline-square" data-target="bootcamp"><i class="ion-code"></i></div>
           </div>
           <div class="main-bio-text">
-            <div class="timeline-event active-event"><p>Hi! I'm Tyler. Click on the timeline squares above to get to know me.</p></div>
-            <div id="la" class="timeline-event">
-              <!-- <img src="img/hermosa.jpg" alt="" /> -->
+            <div id="home-bio" class="timeline-event">
+              <div class="event-heading">HOME SWEET HOME</div>
               <p>
-                I grew up in Hermosa Beach, CA, a small suburb of Los Angeles. I developed a love for the outdoors at a young age. Every summer was spent on the beach or on a lake, and every winter was full of snow trips.
+                I grew up in Hermosa Beach, CA, a small costal town in Los Angeles county. I developed a love for the outdoors at a young age. Every summer was spent on the beach or on a lake, and every winter was full of snow trips. I also gained an early fascination with technology and was an early adopter of the pre-iPod MP3 player.
               </p>
-
             </div>
-            <div id="college" class="timeline-event"><h3>COLLEGE</h3></div>
-            <div id="business" class="timeline-event"><h3>BUSINESS</h3></div>
-            <div id="tech" class="timeline-event"><h3>TECH</h3></div>
-            <div id="bootcamp" class="timeline-event"><h3>BOOTCAMP</h3></div>
-            <!-- <p>
-              My name is Tyler and I was born and raised in California. After college, I spent over two years in the San Francisco tech industry and fell in love with coding.
-            </p>
-            <p>
-              I have a passion for politics, the environment, and music. You can often find me snowboarding, playing poker, or dreaming up ways to change the world.
-            </p> -->
+            <div id="college" class="timeline-event">
+              <div class="event-heading">COLLEGE YEARS</div>
+              <p>
+                I grew up in Hermosa Beach, CA, a small costal town in Los Angeles county. I developed a love for the outdoors at a young age. Every summer was spent on the beach or on a lake, and every winter was full of snow trips. I also gained an early fascination with technology and was an early adopter of the pre-iPod MP3 player.
+              </p>
+            </div>
+            <div id="business" class="timeline-event">
+              <div class="event-heading">BUILDING BUSINESSES</div>
+              <p>
+                I grew up in Hermosa Beach, CA, a small costal town in Los Angeles county. I developed a love for the outdoors at a young age. Every summer was spent on the beach or on a lake, and every winter was full of snow trips. I also gained an early fascination with technology and was an early adopter of the pre-iPod MP3 player.
+              </p>
+            </div>
+            <div id="tech" class="timeline-event">
+              <div class="event-heading">SAN FRANCISCO TECH</div>
+              <p>
+                I grew up in Hermosa Beach, CA, a small costal town in Los Angeles county. I developed a love for the outdoors at a young age. Every summer was spent on the beach or on a lake, and every winter was full of snow trips. I also gained an early fascination with technology and was an early adopter of the pre-iPod MP3 player.
+              </p>
+            </div>
+            <div id="bootcamp" class="timeline-event">
+              <div class="event-heading">PURSUING MY PASSION</div>
+              <p>
+                I grew up in Hermosa Beach, CA, a small costal town in Los Angeles county. I developed a love for the outdoors at a young age. Every summer was spent on the beach or on a lake, and every winter was full of snow trips. I also gained an early fascination with technology and was an early adopter of the pre-iPod MP3 player.
+              </p>
+            </div>
           </div>
         </div>
       </div>

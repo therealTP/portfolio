@@ -156,6 +156,7 @@ $(document).ready(function(){
     }
   });
 
+  console.log(window.innerWidth);
 }); // END
 
 // The MIT License (MIT)

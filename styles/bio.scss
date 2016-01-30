@@ -8,35 +8,47 @@
 }
 
 .bio-content {
-  align-self: stretch;
-  margin: 15px auto;
   width: 100%;
-  max-width: 600px;
-  @extend .flex-section;
+  max-width: $bio-content-max-width;
+  display: flex;
   flex-flow: column nowrap;
   border: $master-border;
-  padding: 20px;
+  padding: $bio-content-padding;
 
   .bio-top-content {
     width: 100%;
-    flex-grow: 1;
     @extend .flex-section;
+
     .bio-photo {
-      width: 30%;
-      min-width: 100px;
-      max-width: 200px;
+      width: $bio-photo-width;
+      min-width: $bio-photo-min-width;
+      max-width: $bio-photo-max-width;
       height: auto;
+      border: $bio-box-border;
     }
 
-    h1 {
-      font-size: 34px;
-      font-weight: 300;
-      margin: 0px 15px;
+    .top-text-wrapper {
+      margin: 0 $arrow-tb-marg;
+
+      h1 {
+        margin: 0;
+        font-size: $bio-h1-size-mobile;
+        font-weight: $main-font-weight;
+      }
+
+      .greeting-text-desktop {
+        display: none;
+      }
     }
   }
 
+  .greeting-text {
+    margin: $arrow-tb-marg auto;
+    font-size: $skills-page-links-size;
+    text-align: justify;
+  }
+
   .timeline-menu {
-    flex-grow: 1;
     width: 100%;
     @extend .flex-section;
     justify-content: space-between;
@@ -44,36 +56,97 @@
     .timeline-square {
       height: $social-icon-width;
       width: $social-icon-width;
-      border: $master-border
+      border: $master-border;
+      color: $color-fill-background-color;
+      padding: $social-icon-padding;
+      font-size: $bio-icon-mobile-size;
+      @extend .flex-section;
+      justify-content: center;
     }
 
     .current-square {
       background-color: $text-color;
+
     }
   }
 
   .main-bio-text {
-    flex-grow: 4;
-    @extend .flex-section;
     .timeline-event {
       display: none;
-      padding: 0 25px;
+      border-left: $bio-text-l-border;
+      margin-top: $arrow-tb-marg;
+      padding-left: $arrow-tb-marg;
+
+      p {
+        margin: 0;
+      }
+
+      .event-heading {
+        font-weight: $bold-heading-font-weight;
+        text-align: left;
+      }
+
     }
 
     .active-event {
       display: flex;
-      align-items: center;
+      flex-flow: column nowrap;
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@media (min-width: 625px) {
+  .bio-content {
+    .bio-top-content {
+      .top-text-wrapper {
+        h1 {
+          font-size: $home-heading-size-mobile;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .bio-content {
+    .bio-top-content {
+      .top-text-wrapper {
+        .greeting-text-desktop {
+          display: block;
+        }
+      }
     }
 
-    // #la {
-    //   background:
-    // 		// linear-gradient(
-    // 		// 	rgba(26, 26, 26, 0.4),
-    // 		// 	rgba(26, 26, 26, 0.4)
-    // 		// ),
-    // 		url('../img/hermosa.jpg') no-repeat;
-    // 	background-size: cover;
-    // 	background-position: center;
-    // }
+    .greeting-text-mobile {
+      display: none;
+    }
+
+    .timeline-menu {
+      margin-top: $bio-content-padding;
+      margin-bottom: $bio-text-h3-marg;
+
+      .timeline-square {
+        height: $bio-time-square-desktop-width;
+        width: $bio-time-square-desktop-width;
+      }
+
+    }
+
+    .timeline-event {
+      font-size: $bio-event-desktop-size;
+      p {
+        font-weight: $light-font-weight;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 934px) {
+  .bio-content {
+    margin-left: $arrow-nav-extra-pad;
   }
 }
