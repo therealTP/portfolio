@@ -300,12 +300,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 0;
-}
-
-body .main-content-wrapper {
   overflow-x: hidden;
-  width: 100%;
+  margin: 0;
 }
 
 body .slide-section {
