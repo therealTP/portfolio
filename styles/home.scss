@@ -2,7 +2,7 @@
 @import 'flex';
 
 #home {
-  left: 0; right: 0; // default in-view slide
+  left: 0; // default in-view slide
   justify-content: center;
   z-index: $home-z;
   background:

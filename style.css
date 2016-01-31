@@ -240,7 +240,6 @@ header #socialBox .social-icon:hover {
 
 #home {
   left: 0;
-  right: 0;
   justify-content: center;
   z-index: 50;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/veil-nebula.jpg") no-repeat;
@@ -306,10 +305,10 @@ body {
 
 body .slide-section {
   position: absolute;
+  width: 100%;
   top: 0;
   bottom: 0;
-  left: 100%;
-  right: -100%;
+  left: 100vw;
   padding: 60px 30px;
   padding-right: 70px;
 }
