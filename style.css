@@ -231,6 +231,19 @@ header #socialBox .social-icon:hover {
   }
 }
 
+@media screen and (max-width: 400px) {
+  header {
+    padding: 0 15px;
+  }
+  header #headerLogo {
+    font-size: 18px;
+  }
+  header .social-box .social-icon {
+    margin-left: 5px;
+    font-size: 24px;
+  }
+}
+
 .flex-section {
   display: flex;
   flex-flow: row nowrap;

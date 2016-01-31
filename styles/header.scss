@@ -44,3 +44,19 @@ header {
 		}
 	}
 }
+
+@media screen and (max-width: 400px) {
+	header {
+		padding: 0 15px;
+		#headerLogo {
+			font-size: 18px;
+		}
+
+		.social-box {
+			.social-icon {
+				margin-left: 5px;
+				font-size: $mobile-logo-font-size;
+			}
+		}
+	}
+}
