@@ -156,10 +156,10 @@ $(document).ready(function(){
     }
   });
 
-  console.log(window.innerWidth); // since of window
-  console.log(window.innerHeight);
-  console.log($(window).width()); // size of slides
-  console.log($(window).height());
+  var actualWidth = console.log(window.innerWidth); // since of window
+  var actualHeight = console.log(window.innerHeight);
+  $(window).width(actualWidth); // size of slides
+  $(window).height(actualHeight);
 }); // END
 
 // The MIT License (MIT)
