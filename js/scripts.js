@@ -156,8 +156,8 @@ $(document).ready(function(){
     }
   });
 
-  console.log(window.innerWidth);
+  console.log(window.innerWidth); // since of window
   console.log(window.innerHeight);
-  console.log($(window).width());
+  console.log($(window).width()); // size of slides
   console.log($(window).height());
 }); // END
