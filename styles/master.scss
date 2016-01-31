@@ -47,17 +47,6 @@ body, a {
 	font-weight: $main-font-weight;
 }
 
-// for landscape
-// @media (orientation: landscape) {
-//   body {
-//     -webkit-transform: rotate(-90deg);
-//     -moz-transform: rotate(-90deg);
-//     -o-transform: rotate(-90deg);
-//     -ms-transform: rotate(-90deg);
-//     transform: rotate(-90deg);
-//   }
-// }
-
 a:active, a:focus {
   outline: none;
 }
@@ -65,4 +54,12 @@ a:active, a:focus {
 a:hover {
   color: $link-hover-color;
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+	body {
+		.slide-section {
+	  	padding: $slide-tb-mobile-pad $slide-lr-mobile-pad;
+		}
+	}
 }

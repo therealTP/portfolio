@@ -236,7 +236,7 @@ header #socialBox .social-icon:hover {
     padding: 0 15px;
   }
   header #headerLogo {
-    font-size: 18px;
+    font-size: 20px;
   }
   header .social-box .social-icon {
     margin-left: 5px;
@@ -285,6 +285,24 @@ header #socialBox .social-icon:hover {
 @media (max-width: 650px) {
   #home-heading-box .live-type {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  #home-heading-box {
+    margin-left: 0;
+  }
+  #home-heading-box .live-type {
+    font-size: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin: 7px;
+  }
+  #home-heading-box h3 {
+    font-size: 24px;
+  }
+  #home-heading-box p {
+    font-size: 16px;
   }
 }
 
@@ -351,6 +369,12 @@ a:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 400px) {
+  body .slide-section {
+    padding: 40px 15px;
+  }
+}
+
 .flex-section, .arrow-nav-container, footer, footer #mainNav {
   display: flex;
   flex-flow: row nowrap;
@@ -390,6 +414,12 @@ footer #mainNav {
 
 footer #mainNav .nav-active {
   color: green;
+}
+
+@media screen and (max-width: 400px) {
+  .arrow-nav-container {
+    padding-right: 15px;
+  }
 }
 
 .flex-section, .skills-content, .skills-content .skills-column-container, .skills-content .skills-column-container .skills-column .skills-column-heading, .skills-content .skills-column-container .skills-column .skill-box {

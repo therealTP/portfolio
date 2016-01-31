@@ -41,3 +41,24 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  #home-heading-box {
+    margin-left: 0;
+
+    .live-type {
+      font-size: $live-type-height-mobile;
+      line-height: $live-type-height-mobile;
+      height: $live-type-height-mobile;
+      margin: $live-type-tb-marg-mobile;
+    }
+
+    h3 {
+      font-size: $home-h3-size-mobile;
+    }
+
+    p {
+      font-size: $home-p-size-mobile
+    }
+  }
+}
