@@ -308,7 +308,7 @@ body .slide-section {
   width: 100%;
   top: 0;
   bottom: 0;
-  left: 100vw;
+  left: 100%;
   padding: 60px 30px;
   padding-right: 70px;
 }
