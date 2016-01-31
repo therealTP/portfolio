@@ -157,5 +157,7 @@ $(document).ready(function(){
   });
 
   console.log(window.innerWidth);
+  console.log(window.innerHeight);
   console.log($(window).width());
+  console.log($(window).height());
 }); // END
