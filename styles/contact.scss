@@ -14,19 +14,22 @@
 	// align-self: flex-start;
 	margin: 5vh auto;
 	h1 {
-		font-size: 42px;
+		font-size: $bio-h1-size-mobile;
 		margin: 0 auto;
 		margin-bottom: 15px;
 	}
 
 	.contact-info {
-		font-size: 20px;
-		margin: 10px auto;
+		margin: $social-icon-padding auto;
+		font-size: $contact-info-font-mobile;
 
 		.contact-text {
 			margin-left: 15px;
 		}
+	}
 
+	p {
+		font-size: $contact-p-font-mobile;
 	}
 
 	.text-form {
@@ -47,7 +50,7 @@
 
 				textarea {
 					resize: none;
-					height: 200px;
+					height: $text-field-height-mobile;
 					// overflow-y: scroll;
 				}
 			}

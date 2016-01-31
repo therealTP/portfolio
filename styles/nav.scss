@@ -38,5 +38,13 @@ footer {
 @media screen and (max-width: 400px) {
   .arrow-nav-container {
     padding-right: $slide-lr-mobile-pad;
+
+    .arrow-box i {
+      font-size: $mobile-arrow-size;
+    }
+  }
+
+  footer {
+    padding: 0 $slide-lr-mobile-pad;
   }
 }

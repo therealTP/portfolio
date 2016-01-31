@@ -28,7 +28,7 @@
     }
 
     .top-text-wrapper {
-      margin-left: $arrow-tb-marg;
+      margin-left: $nav-tb-marg;
 
       h1 {
         margin: 0;
@@ -43,8 +43,8 @@
   }
 
   .greeting-text {
-    margin: $arrow-tb-marg auto;
-    font-size: $skills-page-links-size;
+    margin: $bio-greeting-tb-marg auto;
+    font-size: $bio-greeting-size-mobile;
     text-align: justify;
   }
 
@@ -79,6 +79,7 @@
 
       p {
         margin: 0;
+        font-size: $bio-text-size-mobile;
       }
 
       .event-heading {
@@ -99,7 +100,7 @@
   }
 }
 
-@media (min-width: 625px) {
+@media screen and (min-width: 625px) {
   .bio-content {
     .bio-top-content {
       .top-text-wrapper {
@@ -118,6 +119,7 @@
       .top-text-wrapper {
         .greeting-text-desktop {
           display: block;
+          font-size: $bio-greeting-size-tablet;
         }
       }
     }
@@ -137,10 +139,12 @@
 
     }
 
-    .timeline-event {
-      font-size: $bio-event-desktop-size;
-      p {
-        font-weight: $light-font-weight;
+    .main-bio-text {
+      .timeline-event {
+        p {
+          font-weight: $light-font-weight;
+          font-size: $bio-event-desktop-size;
+        }
       }
     }
   }

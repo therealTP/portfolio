@@ -25,14 +25,14 @@
 
 .bio-content .bio-top-content .bio-photo {
   width: 35%;
-  min-width: 140px;
+  min-width: 100px;
   max-width: 200px;
   height: auto;
   border: 1px solid gray;
 }
 
 .bio-content .bio-top-content .top-text-wrapper {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .bio-content .bio-top-content .top-text-wrapper h1 {
@@ -46,8 +46,8 @@
 }
 
 .bio-content .greeting-text {
-  margin: 15px auto;
-  font-size: 18px;
+  margin: 10px auto;
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -79,6 +79,7 @@
 
 .bio-content .main-bio-text .timeline-event p {
   margin: 0;
+  font-size: 13px;
 }
 
 .bio-content .main-bio-text .timeline-event .event-heading {
@@ -95,7 +96,7 @@
   text-align: justify;
 }
 
-@media (min-width: 625px) {
+@media screen and (min-width: 625px) {
   .bio-content .bio-top-content .top-text-wrapper h1 {
     font-size: 50px;
   }
@@ -107,6 +108,7 @@
   }
   .bio-content .bio-top-content .top-text-wrapper .greeting-text-desktop {
     display: block;
+    font-size: 18px;
   }
   .bio-content .greeting-text-mobile {
     display: none;
@@ -119,11 +121,9 @@
     height: 54px;
     width: 54px;
   }
-  .bio-content .timeline-event {
-    font-size: 18px;
-  }
-  .bio-content .timeline-event p {
+  .bio-content .main-bio-text .timeline-event p {
     font-weight: 200;
+    font-size: 16px;
   }
 }
 
@@ -152,18 +152,22 @@
 }
 
 .contact-content h1 {
-  font-size: 42px;
+  font-size: 34px;
   margin: 0 auto;
   margin-bottom: 15px;
 }
 
 .contact-content .contact-info {
-  font-size: 20px;
-  margin: 10px auto;
+  margin: 5px auto;
+  font-size: 18px;
 }
 
 .contact-content .contact-info .contact-text {
   margin-left: 15px;
+}
+
+.contact-content p {
+  font-size: 15px;
 }
 
 .contact-content .text-form .form-group {
@@ -184,7 +188,7 @@
 
 .contact-content .text-form .form-group .input-div textarea {
   resize: none;
-  height: 200px;
+  height: 160px;
 }
 
 header {
@@ -258,6 +262,7 @@ header #socialBox .social-icon:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/veil-nebula.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  padding-right: 15px;
 }
 
 #home-heading-box {
@@ -302,7 +307,7 @@ header #socialBox .social-icon:hover {
     font-size: 24px;
   }
   #home-heading-box p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -372,6 +377,7 @@ a:hover {
 @media screen and (max-width: 400px) {
   body .slide-section {
     padding: 40px 15px;
+    padding-right: 40px;
   }
 }
 
@@ -419,6 +425,12 @@ footer #mainNav .nav-active {
 @media screen and (max-width: 400px) {
   .arrow-nav-container {
     padding-right: 15px;
+  }
+  .arrow-nav-container .arrow-box i {
+    font-size: 2em;
+  }
+  footer {
+    padding: 0 15px;
   }
 }
 
@@ -491,7 +503,7 @@ footer #mainNav .nav-active {
 
 .skills-content .skills-column-container .skills-column .skill-box p {
   font-size: 22px;
-  margin-left: 5px;
+  margin-left: 4px;
 }
 
 .skills-content .mobile-skills-page-links {
@@ -524,9 +536,12 @@ footer #mainNav .nav-active {
 }
 
 @media screen and (max-width: 875px) {
+  .skills-content {
+    align-self: center;
+  }
   .skills-content .skills-heading {
     margin-right: 0;
-    height: 12vh;
+    height: 8vh;
   }
   .skills-content .skills-column-container {
     flex-flow: row wrap;
@@ -548,7 +563,7 @@ footer #mainNav .nav-active {
   }
   .skills-content .skills-column-container .skills-column .skill-box p {
     font-size: 16px;
-    margin: 8px 5px;
+    margin: 8px 4px;
   }
   .skills-content .skills-column-container #skills-1, .skills-content .skills-column-container #skills-3 {
     order: 1;
@@ -561,6 +576,7 @@ footer #mainNav .nav-active {
 @media screen and (max-width: 600px) {
   .skills-content {
     align-items: space-around;
+    width: 90%;
     padding-left: 40px;
   }
   .skills-content .skills-heading h2 {
@@ -572,9 +588,10 @@ footer #mainNav .nav-active {
   .skills-content .skills-column-container .skills-column {
     width: 100%;
     margin-left: 0;
+    margin-bottom: 4px;
   }
   .skills-content .skills-column-container .skills-column .skill-box p {
-    margin: 7px 5px;
+    margin: 4px;
   }
   .skills-content .skills-column-container #skills-3 {
     order: 2;
@@ -583,7 +600,6 @@ footer #mainNav .nav-active {
     display: none;
   }
   .skills-content .mobile-skills-page-links {
-    height: 12vh;
     align-items: center;
     display: flex;
     font-size: 20px;

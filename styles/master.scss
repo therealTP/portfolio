@@ -60,6 +60,7 @@ a:hover {
 	body {
 		.slide-section {
 	  	padding: $slide-tb-mobile-pad $slide-lr-mobile-pad;
+			padding-right: $arrow-nav-extra-pad;
 		}
 	}
 }

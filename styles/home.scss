@@ -10,6 +10,7 @@
     url('./img/veil-nebula.jpg') no-repeat;
   background-size: cover;
   background-position: center;
+  padding-right: $slide-lr-mobile-pad;
 }
 
 #home-heading-box {
@@ -58,7 +59,7 @@
     }
 
     p {
-      font-size: $home-p-size-mobile
+      font-size: $home-p-size-mobile;
     }
   }
 }

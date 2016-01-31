@@ -116,7 +116,8 @@
 @media screen and (max-width: 875px) {
 
   .skills-content {
-    .skills-heading {
+		align-self: center;
+		.skills-heading {
       margin-right: 0;
       height: $mobile-skills-heading-height;
     }
@@ -167,11 +168,13 @@
 
   .skills-content {
     align-items: space-around;
+		width: 90%;
     padding-left: $arrow-nav-extra-pad;
 
     .skills-heading {
       h2 {
         font-size: $mobile-logo-font-size;
+
       }
     }
 
@@ -181,10 +184,11 @@
       .skills-column {
         width: 100%;
         margin-left: 0;
+				margin-bottom: $skills-mobile-p-l-marg;
 
         .skill-box {
           p {
-            margin: $skills-p-l-marg $skills-mobile-p-l-marg;
+            margin: $skills-mobile-p-l-marg;
           }
         }
       }
@@ -199,7 +203,6 @@
     }
 
     .mobile-skills-page-links {
-      height: $mobile-skills-heading-height;
       align-items: center;
       display: flex;
       font-size: $skill-box-tablet-p-size;

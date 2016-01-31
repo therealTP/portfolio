@@ -14,15 +14,21 @@ $bold-heading-font-weight: 500;
 $skills-heading-font-weight: 400;
 $desktop-logo-font-size: 35px;
 $mobile-logo-font-size: 24px;
+$mobile-arrow-size: 2em;
 $home-heading-size-mobile: 50px;
 $home-heading-size-xs: 36px;
 $home-h3-size: 36px;
 $home-h3-size-mobile: 24px;
 $home-p-size: 20px;
-$home-p-size-mobile: 16px;
+$home-p-size-mobile: 14px;
 $bio-h1-size-mobile: 34px;
+$bio-h1-size-xs: 28px;
+$bio-greeting-size-mobile: 15px;
+$bio-text-size-mobile: 13px;
+$bio-greeting-size-tablet: 18px;
+$bio-text-size-tablet: 16px;
 $bio-icon-mobile-size: 32px;
-$bio-event-desktop-size: 18px;
+$bio-event-desktop-size: 16px;
 $skills-heading-size: 32px;
 $skill-column-heading-size: 20px;
 $skill-box-tablet-icon-size: 28px;
@@ -32,6 +38,8 @@ $skills-page-links-size: 18px;
 $skills-i-size: 32px;
 $skills-i-size-mobile: 22px;
 $skills-p-size: 22px;
+$contact-info-font-mobile: 18px;
+$contact-p-font-mobile: 15px;
 
 // z-index
 $header-z: 100;
@@ -51,15 +59,16 @@ $live-type-height: 75px;
 $live-type-height-mobile: 40px;
 $bio-content-max-width: 750px;
 $bio-photo-width: 35%;
-$bio-photo-min-width: 140px;
+$bio-photo-min-width: 100px;
 $bio-photo-max-width: 200px;
 $bio-time-square-desktop-width: $social-icon-width + 10px;
 $tablet-skills-heading-height: 12vh;
-$mobile-skills-heading-height: 12vh;
+$mobile-skills-heading-height: 8vh;
 $skills-column-heading-tablet-height: 40px;
 $skill-i-box-width: 40px;
 $skill-i-box-width-mobile: 25px;
 $skill-i-img-width: 38px;
+$text-field-height-mobile: 160px;
 
 // padding & margin
 $slide-tb-pad: 60px;
@@ -75,11 +84,12 @@ $nav-tb-marg: 10px;
 $live-type-tb-marg: 10px;
 $live-type-tb-marg-mobile: 7px;
 $bio-text-h3-marg: 5px;
+$bio-greeting-tb-marg: 10px;
 $bio-content-padding: 15px;
 $bio-content-padding-desktop: 20px;
 $skills-column-pad: 10px;
 $skills-p-l-marg: 7px;
-$skills-mobile-p-l-marg: 5px;
+$skills-mobile-p-l-marg: 4px;
 $skills-mobile-tb-marg: 8px;
 
 //border
