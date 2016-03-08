@@ -21,7 +21,7 @@ $home-h3-size: 36px;
 $home-h3-size-mobile: 24px;
 $home-p-size: 20px;
 $home-p-size-mobile: 14px;
-$bio-h1-size-mobile: 34px;
+$bio-h1-size-mobile: 25px;
 $bio-h1-size-xs: 28px;
 $bio-greeting-size-mobile: 15px;
 $bio-text-size-mobile: 13px;
@@ -53,7 +53,7 @@ $contact-z: 10;
 
 // dimensions
 $header-height: 70px;
-$social-icon-width: 44px;
+$social-icon-width: 50px;
 $main-nav-width: 380px;
 $live-type-height: 75px;
 $live-type-height-mobile: 40px;
@@ -96,4 +96,8 @@ $skills-mobile-tb-marg: 8px;
 $master-border: 1px solid $text-color;
 $hover-border: 1px solid red;
 $bio-box-border: 1px solid gray;
-$bio-text-l-border: 3px solid $text-color;
+$bio-text-l-border: 3px solid $color-fill-background-color;
+$timeline-border: 5px solid $text-color;
+
+// shadows
+$material-shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

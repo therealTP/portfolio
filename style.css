@@ -1,4 +1,4 @@
-.flex-section, #bio, .bio-content .bio-top-content, .bio-content .timeline-menu, .bio-content .timeline-menu .timeline-square {
+.flex-section, #bio, .bio-content .bio-top-content, .bio-content .timeline-menu, .bio-content .timeline-menu .timeline-circle, .bio-content .main-bio-text .event-triangle-wrapper {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -15,8 +15,7 @@
   max-width: 750px;
   display: flex;
   flex-flow: column nowrap;
-  border: 1px solid #F0F0F0;
-  padding: 15px;
+  padding: 15px 7px 15px 0;
 }
 
 .bio-content .bio-top-content {
@@ -31,13 +30,10 @@
   border: 1px solid gray;
 }
 
-.bio-content .bio-top-content .top-text-wrapper {
-  margin-left: 10px;
-}
-
 .bio-content .bio-top-content .top-text-wrapper h1 {
   margin: 0;
-  font-size: 34px;
+  margin-bottom: 30px;
+  font-size: 25px;
   font-weight: 300;
 }
 
@@ -49,32 +45,92 @@
   margin: 10px auto;
   font-size: 15px;
   text-align: justify;
+  margin-bottom: 27px;
 }
 
 .bio-content .timeline-menu {
   width: 100%;
+  position: relative;
   justify-content: space-between;
+  border-top: 5px solid #F0F0F0;
 }
 
-.bio-content .timeline-menu .timeline-square {
-  height: 44px;
-  width: 44px;
+.bio-content .timeline-menu .timeline-circle {
+  position: relative;
+  height: 45px;
+  width: 45px;
   border: 1px solid #F0F0F0;
-  color: gray;
+  border-radius: 50%;
+  top: -27px;
+  color: #F0F0F0;
+  background-color: gray;
   padding: 5px;
   font-size: 32px;
   justify-content: center;
 }
 
+.bio-content .timeline-menu .timeline-circle i {
+  font-size: 22px;
+}
+
 .bio-content .timeline-menu .current-square {
   background-color: #F0F0F0;
+  color: gray;
+}
+
+.bio-content .main-bio-text {
+  background-color: #F0F0F0;
+  padding: 20px;
+  display: none;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.bio-content .main-bio-text .event-triangle-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 12px;
+  left: 0;
+  top: -11px;
 }
 
 .bio-content .main-bio-text .timeline-event {
+  color: gray;
   display: none;
-  border-left: 3px solid #F0F0F0;
+  z-index: 40;
+}
+
+.bio-content .main-bio-text .timeline-event .event-triangle {
+  visibility: hidden;
+  height: 25px;
+  width: 25px;
+  background-color: #F0F0F0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.bio-content .main-bio-text .timeline-event .active-tri {
+  visibility: visible;
+}
+
+.bio-content .main-bio-text .timeline-event .timeline-image {
+  width: 100%;
+  height: 20vh;
+}
+
+.bio-content .main-bio-text .timeline-event .event-text-wrapper {
   margin-top: 15px;
-  padding-left: 15px;
+}
+
+.bio-content .main-bio-text .timeline-event #home-image {
+  background-image: url("img/hermosa.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .bio-content .main-bio-text .timeline-event p {
@@ -85,15 +141,6 @@
 .bio-content .main-bio-text .timeline-event .event-heading {
   font-weight: 500;
   text-align: left;
-}
-
-.bio-content .main-bio-text .active-event {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-.bio-content .main-bio-text .active-event p {
-  text-align: justify;
 }
 
 @media screen and (min-width: 625px) {
@@ -118,8 +165,8 @@
     margin-bottom: 5px;
   }
   .bio-content .timeline-menu .timeline-square {
-    height: 54px;
-    width: 54px;
+    height: 60px;
+    width: 60px;
   }
   .bio-content .main-bio-text .timeline-event p {
     font-weight: 200;
@@ -152,7 +199,7 @@
 }
 
 .contact-content h1 {
-  font-size: 34px;
+  font-size: 25px;
   margin: 0 auto;
   margin-bottom: 15px;
 }
@@ -218,7 +265,7 @@ header #socialBox {
 
 header #socialBox .social-icon {
   margin-left: 15px;
-  width: 44px;
+  width: 50px;
   text-align: center;
   font-size: 24px;
   border: 1px solid #F0F0F0;

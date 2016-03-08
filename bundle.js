@@ -146,13 +146,17 @@ $(document).ready(function(){
   });
 
   // show/hide timeline event, highlight square, based on which square is clicked
-  $('.timeline-square').on('click', function() {
+  $('.timeline-circle').on('click', function() {
+
     if (!$(this).hasClass('.current-square')) {
       $('.current-square').removeClass('current-square');
-      $('.timeline-event').removeClass('active-event');
+      $('.timeline-event.active-event').removeClass('active-event').hide();
+      $('.main-bio-text').removeClass('main-bio-text-active').hide();
+
       $(this).addClass('current-square');
+      $('.main-bio-text').fadeIn(600).addClass('main-bio-text-active');
       var target = $(this).attr('data-target');
-      $('#' + target).addClass('active-event');
+      $('#' + target).fadeIn(600).addClass('active-event');
     }
   });
 

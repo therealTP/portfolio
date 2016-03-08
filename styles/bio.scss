@@ -12,8 +12,9 @@
   max-width: $bio-content-max-width;
   display: flex;
   flex-flow: column nowrap;
-  border: $master-border;
-  padding: $bio-content-padding;
+  // border: $master-border;
+  padding: $bio-content-padding 7px $bio-content-padding 0;
+  // padding-left: 0;
 
   .bio-top-content {
     width: 100%;
@@ -28,10 +29,11 @@
     }
 
     .top-text-wrapper {
-      margin-left: $nav-tb-marg;
+      // margin-left: $nav-tb-marg;
 
       h1 {
         margin: 0;
+        margin-bottom: 30px;
         font-size: $bio-h1-size-mobile;
         font-weight: $main-font-weight;
       }
@@ -46,36 +48,99 @@
     margin: $bio-greeting-tb-marg auto;
     font-size: $bio-greeting-size-mobile;
     text-align: justify;
+    margin-bottom: 27px;
   }
 
   .timeline-menu {
     width: 100%;
+    position: relative;
     @extend .flex-section;
     justify-content: space-between;
+    border-top: $timeline-border;
 
-    .timeline-square {
-      height: $social-icon-width;
-      width: $social-icon-width;
+    .timeline-circle {
+      position: relative;
+      height: $social-icon-width - 5px;
+      width: $social-icon-width - 5px;
       border: $master-border;
-      color: $color-fill-background-color;
+      border-radius: 50%;
+      top: -27px;
+      color: $text-color;
+      background-color: $color-fill-background-color;
       padding: $social-icon-padding;
       font-size: $bio-icon-mobile-size;
       @extend .flex-section;
       justify-content: center;
+
+      i {
+        font-size: 22px;
+      }
     }
 
     .current-square {
       background-color: $text-color;
+      color: $color-fill-background-color;
 
     }
   }
 
   .main-bio-text {
+    background-color: $text-color;
+    padding: $bio-content-padding-desktop;
+    display: none;
+    position: relative;
+    // border-radius: 5px;
+    box-shadow: $material-shadow-3;
+
+    .event-triangle-wrapper {
+      z-index: 10;
+      position: absolute;
+      width: 100%;
+      @extend .flex-section;
+      justify-content: space-between;
+      padding: 0 12px;
+      left: 0;
+      top: -11px;
+
+    }
+
     .timeline-event {
+      color: $color-fill-background-color;
       display: none;
-      border-left: $bio-text-l-border;
-      margin-top: $arrow-tb-marg;
-      padding-left: $arrow-tb-marg;
+      z-index: 40;
+
+      .event-triangle {
+        visibility: hidden;
+        height: 25px; width: 25px;
+        background-color: $text-color;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      .active-tri {
+        visibility: visible;
+      }
+
+      .timeline-image {
+        width: 100%;
+        height: 20vh;
+      }
+
+     .event-text-wrapper {
+        // border-left: $bio-text-l-border;
+        // padding-left: $arrow-tb-marg;
+        margin-top: $arrow-tb-marg;
+     }
+
+      #home-image {
+        background-image: url('img/hermosa.jpg');
+        background-position: center;
+        background-size: cover;
+      }
+
 
       p {
         margin: 0;
@@ -89,15 +154,19 @@
 
     }
 
-    .active-event {
-      display: flex;
-      flex-flow: column nowrap;
-
-      p {
-        text-align: justify;
-      }
-    }
+    // .active-event {
+    //   display: flex;
+    //   flex-flow: column nowrap;
+    //
+    //   p {
+    //     text-align: justify;
+    //   }
+    // }
   }
+
+  // .main-bio-text.main-bio-text-active {
+  //   display: block;
+  // }
 }
 
 @media screen and (min-width: 625px) {
