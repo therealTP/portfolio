@@ -15,7 +15,6 @@
 
 #home-heading-box {
   text-align: center;
-  margin-left: $arrow-nav-extra-pad;
 
   .live-type {
     height: $live-type-height;
@@ -32,6 +31,7 @@
 
   p {
     font-size: $home-p-size;
+    margin: 0 auto;
   }
 }
 
@@ -43,7 +43,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   #home-heading-box {
     margin-left: 0;
 

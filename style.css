@@ -8,6 +8,7 @@
 #bio {
   z-index: 40;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .bio-content {
@@ -15,37 +16,43 @@
   max-width: 750px;
   display: flex;
   flex-flow: column nowrap;
-  padding: 15px 7px 15px 0;
+  padding: 25px 0 15px 0;
 }
 
 .bio-content .bio-top-content {
   width: 100%;
 }
 
-.bio-content .bio-top-content .bio-photo {
-  width: 35%;
+.bio-content .bio-top-content .bio-heading-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 25px;
+  align-items: center;
+}
+
+.bio-content .bio-top-content .bio-heading-wrapper .bio-photo {
+  width: 18vh;
   min-width: 100px;
   max-width: 200px;
-  height: auto;
+  height: 18vh;
   border: 1px solid gray;
+  background-image: url("img/bio-photo-light.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.bio-content .bio-top-content .top-text-wrapper h1 {
-  margin: 0;
-  margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: 300;
-}
-
-.bio-content .bio-top-content .top-text-wrapper .greeting-text-desktop {
-  display: none;
+.bio-content .bio-top-content .bio-heading-wrapper .heading-text-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 10px;
 }
 
 .bio-content .greeting-text {
   margin: 10px auto;
   font-size: 15px;
-  text-align: justify;
-  margin-bottom: 27px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .bio-content .timeline-menu {
@@ -57,20 +64,19 @@
 
 .bio-content .timeline-menu .timeline-circle {
   position: relative;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   border: 1px solid #F0F0F0;
   border-radius: 50%;
-  top: -27px;
+  top: -25px;
   color: #F0F0F0;
   background-color: gray;
   padding: 5px;
-  font-size: 32px;
   justify-content: center;
 }
 
 .bio-content .timeline-menu .timeline-circle i {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .bio-content .timeline-menu .current-square {
@@ -91,7 +97,7 @@
   position: absolute;
   width: 100%;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 0 7px;
   left: 0;
   top: -11px;
 }
@@ -118,13 +124,9 @@
   visibility: visible;
 }
 
-.bio-content .main-bio-text .timeline-event .timeline-image {
-  width: 100%;
-  height: 20vh;
-}
-
 .bio-content .main-bio-text .timeline-event .event-text-wrapper {
-  margin-top: 15px;
+  max-height: 25vh;
+  overflow-y: scroll;
 }
 
 .bio-content .main-bio-text .timeline-event #home-image {
@@ -144,14 +146,41 @@
 }
 
 @media screen and (min-width: 625px) {
-  .bio-content .bio-top-content .top-text-wrapper h1 {
-    font-size: 50px;
+  .bio-content {
+    padding-top: 35px;
+  }
+  .bio-content .bio-top-content .top-text-wrapper .bio-heading-wrapper {
+    font-size: 53px;
+  }
+  .bio-content .timeline-menu .timeline-circle {
+    height: 50px;
+    width: 50px;
+  }
+  .bio-content .timeline-menu .timeline-circle i {
+    font-size: 22px;
+  }
+  .bio-content .main-bio-text .event-triangle-wrapper {
+    padding: 0 12px;
+  }
+  .bio-content .main-bio-text .timeline-event .event-text-wrapper {
+    overflow-y: hidden;
+  }
+  .bio-content .main-bio-text .timeline-event .event-text-wrapper .event-heading {
+    font-size: 24px;
   }
 }
 
 @media screen and (min-width: 730px) {
   .bio-content {
     padding: 20px;
+  }
+  .bio-content .bio-top-content .bio-heading-wrapper .heading-text-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 10px;
+  }
+  .bio-content .bio-top-content .bio-heading-wrapper .heading-text-wrapper .non-bold-heading-bio {
+    margin-left: 10px;
   }
   .bio-content .bio-top-content .top-text-wrapper .greeting-text-desktop {
     display: block;
@@ -257,19 +286,20 @@ header #socialBox {
   float: right;
   height: 70px;
   z-index: 60;
+  width: 50%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 header #socialBox .social-icon {
-  margin-left: 15px;
-  width: 50px;
   text-align: center;
+  width: 50px;
   font-size: 24px;
   border: 1px solid #F0F0F0;
   padding: 5px;
+  margin-left: 10px;
 }
 
 header #socialBox .social-icon:hover {
@@ -282,15 +312,16 @@ header #socialBox .social-icon:hover {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   header {
     padding: 0 15px;
   }
   header #headerLogo {
     font-size: 20px;
   }
-  header .social-box .social-icon {
-    margin-left: 5px;
+  header #socialBox .social-icon {
+    margin-left: 7px;
+    width: 40px;
     font-size: 24px;
   }
 }
@@ -314,7 +345,6 @@ header #socialBox .social-icon:hover {
 
 #home-heading-box {
   text-align: center;
-  margin-left: 40px;
 }
 
 #home-heading-box .live-type {
@@ -332,6 +362,7 @@ header #socialBox .social-icon:hover {
 
 #home-heading-box p {
   font-size: 20px;
+  margin: 0 auto;
 }
 
 @media (max-width: 650px) {
@@ -340,7 +371,7 @@ header #socialBox .social-icon:hover {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   #home-heading-box {
     margin-left: 0;
   }

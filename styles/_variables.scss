@@ -53,15 +53,16 @@ $contact-z: 10;
 
 // dimensions
 $header-height: 70px;
-$social-icon-width: 50px;
+$social-icon-width-mob: 40px;
+$social-icon-width-tab: 50px;
 $main-nav-width: 380px;
 $live-type-height: 75px;
 $live-type-height-mobile: 40px;
 $bio-content-max-width: 750px;
-$bio-photo-width: 35%;
+$bio-photo-width: 18vh;
 $bio-photo-min-width: 100px;
 $bio-photo-max-width: 200px;
-$bio-time-square-desktop-width: $social-icon-width + 10px;
+$bio-time-square-desktop-width: $social-icon-width-tab + 10px;
 $tablet-skills-heading-height: 12vh;
 $mobile-skills-heading-height: 8vh;
 $skills-column-heading-tablet-height: 40px;

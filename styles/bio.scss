@@ -5,6 +5,7 @@
   z-index: $bio-z;
   @extend .flex-section;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .bio-content {
@@ -12,43 +13,43 @@
   max-width: $bio-content-max-width;
   display: flex;
   flex-flow: column nowrap;
-  // border: $master-border;
-  padding: $bio-content-padding 7px $bio-content-padding 0;
-  // padding-left: 0;
+  padding: $bio-content-padding + 10px 0 $bio-content-padding 0;
 
   .bio-top-content {
     width: 100%;
     @extend .flex-section;
 
-    .bio-photo {
-      width: $bio-photo-width;
-      min-width: $bio-photo-min-width;
-      max-width: $bio-photo-max-width;
-      height: auto;
-      border: $bio-box-border;
-    }
+    .bio-heading-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      font-size: $bio-h1-size-mobile;
+      align-items: center;
 
-    .top-text-wrapper {
-      // margin-left: $nav-tb-marg;
-
-      h1 {
-        margin: 0;
-        margin-bottom: 30px;
-        font-size: $bio-h1-size-mobile;
-        font-weight: $main-font-weight;
+      .bio-photo {
+        width: $bio-photo-width;
+        min-width: $bio-photo-min-width;
+        max-width: $bio-photo-max-width;
+        height: $bio-photo-width;
+        border: $bio-box-border;
+        background-image: url('img/bio-photo-light.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
 
-      .greeting-text-desktop {
-        display: none;
+      .heading-text-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-left: 10px;
       }
     }
   }
 
   .greeting-text {
-    margin: $bio-greeting-tb-marg auto;
+    margin: 10px auto;
     font-size: $bio-greeting-size-mobile;
-    text-align: justify;
-    margin-bottom: 27px;
+    text-align: center;
+    margin-bottom: 32px;
   }
 
   .timeline-menu {
@@ -60,20 +61,19 @@
 
     .timeline-circle {
       position: relative;
-      height: $social-icon-width - 5px;
-      width: $social-icon-width - 5px;
+      height: $social-icon-width-tab - 10px;
+      width: $social-icon-width-tab - 10px;
       border: $master-border;
       border-radius: 50%;
-      top: -27px;
+      top: -25px;
       color: $text-color;
       background-color: $color-fill-background-color;
       padding: $social-icon-padding;
-      font-size: $bio-icon-mobile-size;
       @extend .flex-section;
       justify-content: center;
 
       i {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
@@ -89,7 +89,6 @@
     padding: $bio-content-padding-desktop;
     display: none;
     position: relative;
-    // border-radius: 5px;
     box-shadow: $material-shadow-3;
 
     .event-triangle-wrapper {
@@ -98,7 +97,7 @@
       width: 100%;
       @extend .flex-section;
       justify-content: space-between;
-      padding: 0 12px;
+      padding: 0 7px;
       left: 0;
       top: -11px;
 
@@ -108,6 +107,7 @@
       color: $color-fill-background-color;
       display: none;
       z-index: 40;
+
 
       .event-triangle {
         visibility: hidden;
@@ -124,15 +124,10 @@
         visibility: visible;
       }
 
-      .timeline-image {
-        width: 100%;
-        height: 20vh;
-      }
 
      .event-text-wrapper {
-        // border-left: $bio-text-l-border;
-        // padding-left: $arrow-tb-marg;
-        margin-top: $arrow-tb-marg;
+        max-height: 25vh;
+        overflow-y: scroll;
      }
 
       #home-image {
@@ -153,28 +148,42 @@
       }
 
     }
-
-    // .active-event {
-    //   display: flex;
-    //   flex-flow: column nowrap;
-    //
-    //   p {
-    //     text-align: justify;
-    //   }
-    // }
   }
-
-  // .main-bio-text.main-bio-text-active {
-  //   display: block;
-  // }
 }
 
 @media screen and (min-width: 625px) {
   .bio-content {
+    padding-top: $bio-content-padding + 20px;
     .bio-top-content {
       .top-text-wrapper {
-        h1 {
-          font-size: $home-heading-size-mobile;
+        .bio-heading-wrapper {
+          font-size: $home-heading-size-mobile + 3px;
+        }
+      }
+    }
+
+    .timeline-menu {
+      .timeline-circle {
+        height: $social-icon-width-tab;
+        width: $social-icon-width-tab;
+
+        i {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .main-bio-text {
+      .event-triangle-wrapper {
+        padding: 0 12px;
+      }
+
+      .timeline-event {
+        .event-text-wrapper {
+          .event-heading {
+            font-size: $home-h3-size-mobile;
+          }
+          overflow-y: hidden;
         }
       }
     }
@@ -185,6 +194,17 @@
   .bio-content {
     padding: $bio-content-padding-desktop;
     .bio-top-content {
+      .bio-heading-wrapper {
+        .heading-text-wrapper {
+          display: flex;
+          flex-flow: row nowrap;
+          margin-left: 10px;
+
+          .non-bold-heading-bio {
+            margin-left: 10px;
+          }
+        }
+      }
       .top-text-wrapper {
         .greeting-text-desktop {
           display: block;
