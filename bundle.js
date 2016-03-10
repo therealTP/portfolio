@@ -160,10 +160,32 @@ $(document).ready(function(){
     }
   });
 
+  /// WORK PAGE
+
+  // hide modal by default
+  $('#work-modal-overlay').hide();
+
+  // open modal when project box clicked on
+  $('#rep-project-box').on('click', function() {
+    $('#work-modal-overlay').show();
+  });
+
+  // close modal when overlay clicked on (outside of content)
+  $('#work-modal-overlay').on('click', function() {
+    $(this).hide();
+  });
+
+  // stop event propagation when modal content is clicked on, don't close
+  $('#work-modal-wrapper').on('click', function(event) {
+    event.stopPropagation();
+  });
+
   var actualWidth = console.log(window.innerWidth); // since of window
   var actualHeight = console.log(window.innerHeight);
   $(window).width(actualWidth); // size of slides
   $(window).height(actualHeight);
+
+
 }); // END
 
 // The MIT License (MIT)

@@ -17,6 +17,7 @@
 
 footer {
 	position: fixed;
+  opacity: 0.999;
 	bottom: 0;
   width: 100%;
   padding: 0 $header-lr-padding;
@@ -29,9 +30,11 @@ footer {
     width: $main-nav-width;
     @extend .flex-section;
     justify-content: space-between;
+    z-index: $header-z;
     .nav-active {
       color: $nav-active;
     }
+
   }
 }
 

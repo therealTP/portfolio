@@ -483,6 +483,7 @@ a:hover {
 
 footer {
   position: fixed;
+  opacity: 0.999;
   bottom: 0;
   width: 100%;
   padding: 0 30px;
@@ -494,6 +495,7 @@ footer {
 footer #mainNav {
   width: 380px;
   justify-content: space-between;
+  z-index: 100;
 }
 
 footer #mainNav .nav-active {
@@ -699,4 +701,77 @@ footer #mainNav .nav-active {
 
 #work {
   z-index: 20;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+#work h2 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+#work .project-box-container {
+  width: 100%;
+  height: 67vh;
+  overflow-y: scroll;
+  border: 3px solid #F0F0F0;
+}
+
+#work .project-box-container .project-box {
+  height: 20vh;
+  border-bottom: 1px solid #F0F0F0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+#work .project-box-container #rep-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/rep-work-photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#work .project-box-container #habits-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/habits-work-photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#work .project-box-container #fantasy-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/fantasy-work-photo-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#work .project-box-container #viaje-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/viaje-work-photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#work-modal-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#work-modal-overlay #work-modal-wrapper {
+  width: 50%;
+  background-color: #F0F0F0;
+  z-index: 160;
+}
+
+#work-modal-overlay #work-modal-wrapper .modal-content {
+  color: #424242;
+  padding: 20px;
 }
