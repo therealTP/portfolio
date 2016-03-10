@@ -33,12 +33,17 @@
 	}
 
 	.text-form {
-
+		width: 100%;
 		.form-group {
 			margin: 10px auto;
 
 			.input-div {
 				margin-top: 10px;
+
+				textarea {
+					resize: none;
+					height: $text-field-height-mobile;
+				}
 
 				.contact-input {
 					border: $master-border;
@@ -47,11 +52,45 @@
 					width: 100%;
 					padding: 5px;
 				}
+			}
+		}
+	}
 
-				textarea {
-					resize: none;
-					height: $text-field-height-mobile;
-					// overflow-y: scroll;
+}
+
+@media screen and (min-width: 500px) {
+	#contact {
+		padding-left: $slide-lr-pad + $arrow-nav-extra-pad;
+	}
+	.contact-content {
+		h1 {
+			text-align: center;
+			font-size: $bio-h1-size-mobile + 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+
+	.contact-content {
+		h1 {
+			font-size: $bio-h1-size-mobile + 20px;
+		}
+
+		.contact-info {
+			font-size: $contact-info-font-mobile + 5px;
+		}
+
+		p {
+			font-size: $contact-p-font-mobile + 5px;
+		}
+
+		.text-form {
+			.form-group {
+				.input-div {
+					.contact-input {
+						padding: 10px;
+					}
 				}
 			}
 		}

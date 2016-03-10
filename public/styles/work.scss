@@ -1,0 +1,284 @@
+@import 'variables';
+@import 'flex';
+
+#work {
+	z-index: $work-z;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+
+	h2 {
+		margin-top: 35px;
+		margin-bottom: 10px;
+		font-size: 28px;
+	}
+
+	.work-subheading {
+		display: none;
+		font-size: 20px;
+		margin-bottom: 12px;
+	}
+
+	.work-bottom-text {
+		display: none;
+		margin-top: 3vh;
+		font-style: italic;
+		font-size: 20px;
+	}
+
+	.project-box-container {
+		width: 100%;
+		max-width: 850px;
+		height: 67vh;
+		overflow-y: scroll;
+		// border: $project-box-border;
+		// border: $master-border;
+
+		.project-box {
+			height: 22vh;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			font-weight: 500;
+
+			.more-info-button {
+				font-size: 12px;
+				font-weight: 200;
+				border: $master-border;
+				padding: 10px;
+				margin-top: 7px;
+				cursor: pointer;
+			}
+
+			.more-info-button:hover {
+				background-color: $text-color;
+				color: $body-background-color;
+			}
+		}
+
+		#rep-project-box {
+			background:
+				/* top, transparent red, faked with gradient */
+				linear-gradient(
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)
+				),
+				/* bottom, image */
+				url('img/rep-work-photo.jpg');
+				background-position: center;
+				background-size: cover;
+		}
+
+		#habits-project-box {
+			background:
+				/* top, transparent red, faked with gradient */
+				linear-gradient(
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)
+				),
+				/* bottom, image */
+				url('img/habits-work-photo.jpg');
+				background-position: center;
+				background-size: cover;
+		}
+
+		#fantasy-project-box {
+			background:
+				/* top, transparent red, faked with gradient */
+				linear-gradient(
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)
+				),
+				/* bottom, image */
+				url('img/fantasy-work-photo-2.jpg');
+				background-position: center;
+				background-size: cover;
+		}
+
+		#viaje-project-box {
+			background:
+				/* top, transparent red, faked with gradient */
+				linear-gradient(
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)
+				),
+				/* bottom, image */
+				url('img/viaje-work-photo.jpg');
+				background-position: center;
+				background-size: cover;
+		}
+	}
+}
+
+#work-modal-overlay {
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 150;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	#work-modal-wrapper {
+		width: 80%;
+		background-color: $text-color;
+		z-index: 160;
+		position: relative;
+
+		.modal-content {
+			color: $body-background-color;
+			padding: 20px;
+			display: none;
+
+			.modal-wrapper-close {
+				position: absolute;
+				top: 10px; right: 10px;
+			  cursor: pointer;
+			}
+
+
+			h2 {
+				margin: 0;
+				text-align: center;
+			}
+
+			p {
+				margin: 10px auto;
+			}
+
+			h5 {
+				margin: 5px auto;
+				text-align: center;
+			}
+
+			.modal-tools-wrapper {
+				display: flex;
+				flex-flow: row wrap;
+				align-items: space-between;
+				justify-content: center;
+
+				.modal-tool {
+					padding: 10px;
+					background-color: $color-fill-background-color;
+					color: $text-color;
+					margin-right: 5px;
+					margin-bottom: 5px;
+				}
+			}
+
+			.modal-links {
+
+				.modal-link {
+					margin-top: 10px;
+
+					i, .modal-link-text {
+						font-size: 20px;
+					}
+
+					i {
+						display: inline-block;
+						width: 20px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media screen and (min-width: 400px) {
+	#work {
+  	padding: $slide-tb-mobile-pad $arrow-nav-extra-pad + 30px;
+
+		.work-subheading {
+			display: block;
+		}
+	}
+}
+
+
+// adjust modal
+@media screen and (min-width: 500px) {
+	#work-modal-overlay {
+		#work-modal-wrapper {
+			width: 65%;
+		}
+	}
+}
+
+@media screen and (min-width: 650px) {
+	#work {
+  	h2 {
+			font-size: $skills-heading-size + 15px;
+		}
+	}
+
+	#work-modal-overlay {
+		#work-modal-wrapper {
+			max-width: 600px;
+			.modal-content {
+				.modal-links {
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: space-around;
+
+					.modal-link {
+						display: flex;
+						flex-flow: column nowrap;
+						align-items: center;
+						// justify-content: center;
+
+						i, .modal-link-text {
+							display: block;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#work {
+		h2 {
+			margin-top: 7vh;
+		}
+		.work-subheading {
+			margin-bottom: 3vh;
+		}
+
+		.work-bottom-text {
+			display: block;
+		}
+
+		.project-box-container {
+			align-self: center;
+			display: flex;
+			flex-flow: row wrap;
+			overflow-y: hidden;
+			height: auto;
+
+			.project-box {
+				height: 25vh;
+			}
+
+			#rep-project-box {
+				width: 66.6%;
+			}
+
+			#habits-project-box {
+				width: 33.4%;
+			}
+
+			#fantasy-project-box {
+				width: 33.4%;
+			}
+
+			#viaje-project-box {
+				width: 66.6%;
+			}
+		}
+	}
+}

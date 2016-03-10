@@ -30,7 +30,6 @@ footer {
     width: $main-nav-width;
     @extend .flex-section;
     justify-content: space-between;
-    z-index: $header-z;
     .nav-active {
       color: $nav-active;
     }

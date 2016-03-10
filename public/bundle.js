@@ -1,3 +1,7 @@
+$(window).load(function() {
+    $("body").fadeIn("slow");
+});
+
 $(document).ready(function(){
 
   // animation properties
@@ -165,14 +169,21 @@ $(document).ready(function(){
   // hide modal by default
   $('#work-modal-overlay').hide();
 
-  // open modal when project box clicked on
-  $('#rep-project-box').on('click', function() {
-    $('#work-modal-overlay').show();
+  // open modal for each project when clicked on
+  $('.more-info-button').on('click', function() {
+    var target = $(this).attr('data-target');
+    $('#' + target + '-modal-content, #work-modal-overlay').show();
   });
 
   // close modal when overlay clicked on (outside of content)
   $('#work-modal-overlay').on('click', function() {
     $(this).hide();
+    $('.modal-content').hide();
+  });
+
+  // close modal when "x" clicked
+  $('.modal-wrapper-close').on('click', function() {
+    $('#work-modal-overlay, .modal-content').hide();
   });
 
   // stop event propagation when modal content is clicked on, don't close

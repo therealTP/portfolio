@@ -5,7 +5,7 @@
   z-index: $bio-z;
   @extend .flex-section;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .bio-content {
@@ -19,28 +19,33 @@
     width: 100%;
     @extend .flex-section;
 
-    .bio-heading-wrapper {
-      display: flex;
-      flex-flow: row nowrap;
-      font-size: $bio-h1-size-mobile;
-      align-items: center;
-
-      .bio-photo {
-        width: $bio-photo-width;
-        min-width: $bio-photo-min-width;
-        max-width: $bio-photo-max-width;
-        height: $bio-photo-width;
-        border: $bio-box-border;
-        background-image: url('img/bio-photo-light.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .heading-text-wrapper {
+    .top-text-wrapper {
+      width: 100%;
+      .bio-heading-wrapper {
         display: flex;
-        flex-flow: column nowrap;
-        margin-left: 10px;
+        flex-flow: row nowrap;
+        font-size: $bio-h1-size-mobile;
+        align-items: center;
+
+        .bio-photo {
+          width: $bio-photo-width;
+          min-width: $bio-photo-min-width;
+          max-width: $bio-photo-max-width;
+          height: $bio-photo-width;
+          border: $bio-box-border;
+          background-image: url('img/bio-photo-light.png');
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        .heading-text-wrapper {
+          margin-left: 10px;
+
+          .non-bold-heading-bio {
+            white-space: nowrap;
+          }
+        }
       }
     }
   }
@@ -180,10 +185,14 @@
 
       .timeline-event {
         .event-text-wrapper {
+          overflow-y: hidden;
           .event-heading {
             font-size: $home-h3-size-mobile;
           }
-          overflow-y: hidden;
+          p {
+            font-weight: $light-font-weight;
+            font-size: $bio-event-desktop-size;
+          }
         }
       }
     }
@@ -194,17 +203,6 @@
   .bio-content {
     padding: $bio-content-padding-desktop;
     .bio-top-content {
-      .bio-heading-wrapper {
-        .heading-text-wrapper {
-          display: flex;
-          flex-flow: row nowrap;
-          margin-left: 10px;
-
-          .non-bold-heading-bio {
-            margin-left: 10px;
-          }
-        }
-      }
       .top-text-wrapper {
         .greeting-text-desktop {
           display: block;
@@ -227,20 +225,25 @@
       }
 
     }
-
-    .main-bio-text {
-      .timeline-event {
-        p {
-          font-weight: $light-font-weight;
-          font-size: $bio-event-desktop-size;
-        }
-      }
-    }
   }
 }
 
 @media screen and (min-width: 934px) {
   .bio-content {
     margin-left: $arrow-nav-extra-pad;
+
+    .bio-top-content {
+      .bio-heading-wrapper {
+        .heading-text-wrapper {
+          display: flex;
+          flex-flow: row nowrap;
+          font-size: $home-heading-size-mobile;
+
+          .non-bold-heading-bio {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
   }
 }
