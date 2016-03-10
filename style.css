@@ -766,7 +766,7 @@ footer #mainNav .nav-active {
 }
 
 #work-modal-overlay #work-modal-wrapper {
-  width: 50%;
+  width: 80%;
   background-color: #F0F0F0;
   z-index: 160;
 }
