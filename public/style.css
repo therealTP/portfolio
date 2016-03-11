@@ -146,6 +146,10 @@
   font-size: 13px;
 }
 
+.bio-content .main-bio-text .timeline-event p a {
+  color: #3F4DBF;
+}
+
 .bio-content .main-bio-text .timeline-event .event-heading {
   font-weight: 500;
   text-align: left;
@@ -880,21 +884,28 @@ footer #mainNav .nav-active {
   margin-top: 10px;
 }
 
-#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link i, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link .modal-link-text {
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a {
+  color: #424242;
+}
+
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a .modal-link-text {
   font-size: 20px;
 }
 
-#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link i {
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i {
   display: inline-block;
   width: 20px;
+}
+
+#work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link .coming-soon-link {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 400px) {
   #work {
     padding: 40px 70px;
-  }
-  #work .work-subheading {
-    display: block;
   }
 }
 
@@ -916,12 +927,12 @@ footer #mainNav .nav-active {
     flex-flow: row nowrap;
     justify-content: space-around;
   }
-  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link {
+  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
   }
-  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link i, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link .modal-link-text {
+  #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a i, #work-modal-overlay #work-modal-wrapper .modal-content .modal-links .modal-link a .modal-link-text {
     display: block;
   }
 }
@@ -931,6 +942,7 @@ footer #mainNav .nav-active {
     margin-top: 7vh;
   }
   #work .work-subheading {
+    display: block;
     margin-bottom: 3vh;
   }
   #work .work-bottom-text {

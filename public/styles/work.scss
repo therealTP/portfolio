@@ -172,14 +172,25 @@
 				.modal-link {
 					margin-top: 10px;
 
-					i, .modal-link-text {
-						font-size: 20px;
+					a {
+						color: $body-background-color;
+
+						i, .modal-link-text {
+							font-size: 20px;
+						}
+
+						i {
+							display: inline-block;
+							width: 20px;
+						}
 					}
 
-					i {
-						display: inline-block;
-						width: 20px;
+					.coming-soon-link {
+						pointer-events: none;
+						cursor: default;
+						opacity: 0.5;
 					}
+
 				}
 			}
 
@@ -190,10 +201,6 @@
 @media screen and (min-width: 400px) {
 	#work {
   	padding: $slide-tb-mobile-pad $arrow-nav-extra-pad + 30px;
-
-		.work-subheading {
-			display: block;
-		}
 	}
 }
 
@@ -224,13 +231,15 @@
 					justify-content: space-around;
 
 					.modal-link {
-						display: flex;
-						flex-flow: column nowrap;
-						align-items: center;
-						// justify-content: center;
+						a {
+							display: flex;
+							flex-flow: column nowrap;
+							align-items: center;
+							// justify-content: center;
 
-						i, .modal-link-text {
-							display: block;
+							i, .modal-link-text {
+								display: block;
+							}
 						}
 					}
 				}
@@ -246,6 +255,7 @@
 			margin-top: 7vh;
 		}
 		.work-subheading {
+			display: block;
 			margin-bottom: 3vh;
 		}
 
