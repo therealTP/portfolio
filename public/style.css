@@ -671,7 +671,7 @@ footer #mainNav .nav-active {
     margin-bottom: 10px;
   }
   .skills-content .skills-column-container .skills-column .skills-column-heading {
-    height: 40px;
+    height: 6vh;
     font-size: 16px;
   }
   .skills-content .skills-column-container .skills-column .skill-box .icon-box i {
@@ -699,7 +699,7 @@ footer #mainNav .nav-active {
     padding-left: 40px;
   }
   .skills-content .skills-heading h2 {
-    font-size: 24px;
+    font-size: 19px;
   }
   .skills-content .skills-column-container {
     margin-left: 0;
@@ -708,6 +708,7 @@ footer #mainNav .nav-active {
     width: 100%;
     margin-left: 0;
     margin-bottom: 4px;
+    padding-bottom: 1vh;
   }
   .skills-content .skills-column-container .skills-column .skill-box p {
     margin: 4px;
@@ -745,9 +746,9 @@ footer #mainNav .nav-active {
 }
 
 #work h2 {
-  margin-top: 35px;
+  margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 #work .work-subheading {
@@ -766,7 +767,7 @@ footer #mainNav .nav-active {
 #work .project-box-container {
   width: 100%;
   max-width: 850px;
-  height: 67vh;
+  height: 65vh;
   overflow-y: scroll;
 }
 
@@ -814,6 +815,12 @@ footer #mainNav .nav-active {
 
 #work .project-box-container #viaje-project-box {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/viaje-work-photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#work .project-box-container #energy-project-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/energy-photo.png");
   background-position: center;
   background-size: cover;
 }
@@ -965,9 +972,12 @@ footer #mainNav .nav-active {
     width: 33.4%;
   }
   #work .project-box-container #fantasy-project-box {
-    width: 33.4%;
+    width: 25%;
   }
   #work .project-box-container #viaje-project-box {
-    width: 66.6%;
+    width: 50%;
+  }
+  #work .project-box-container #energy-project-box {
+    width: 25%;
   }
 }

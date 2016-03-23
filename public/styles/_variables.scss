@@ -66,7 +66,7 @@ $bio-photo-max-width: 200px;
 $bio-time-square-desktop-width: $social-icon-width-tab + 10px;
 $tablet-skills-heading-height: 12vh;
 $mobile-skills-heading-height: 8vh;
-$skills-column-heading-tablet-height: 40px;
+$skills-column-heading-tablet-height: 6vh;
 $skill-i-box-width: 40px;
 $skill-i-box-width-mobile: 25px;
 $skill-i-img-width: 38px;
@@ -93,6 +93,7 @@ $skills-column-pad: 10px;
 $skills-p-l-marg: 7px;
 $skills-mobile-p-l-marg: 4px;
 $skills-mobile-tb-marg: 8px;
+$skills-column-mobile-pad-bottom: 1vh;
 
 //border
 $master-border: 1px solid $text-color;

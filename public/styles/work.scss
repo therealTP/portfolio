@@ -7,9 +7,9 @@
 	justify-content: flex-start;
 
 	h2 {
-		margin-top: 35px;
+		margin-top: 30px;
 		margin-bottom: 10px;
-		font-size: 28px;
+		font-size: 24px;
 	}
 
 	.work-subheading {
@@ -28,10 +28,8 @@
 	.project-box-container {
 		width: 100%;
 		max-width: 850px;
-		height: 67vh;
+		height: 65vh;
 		overflow-y: scroll;
-		// border: $project-box-border;
-		// border: $master-border;
 
 		.project-box {
 			height: 22vh;
@@ -59,7 +57,6 @@
 
 		#rep-project-box {
 			background:
-				/* top, transparent red, faked with gradient */
 				linear-gradient(
 					rgba(0, 0, 0, 0.5),
 					rgba(0, 0, 0, 0.5)
@@ -72,7 +69,6 @@
 
 		#habits-project-box {
 			background:
-				/* top, transparent red, faked with gradient */
 				linear-gradient(
 					rgba(0, 0, 0, 0.5),
 					rgba(0, 0, 0, 0.5)
@@ -85,7 +81,6 @@
 
 		#fantasy-project-box {
 			background:
-				/* top, transparent red, faked with gradient */
 				linear-gradient(
 					rgba(0, 0, 0, 0.5),
 					rgba(0, 0, 0, 0.5)
@@ -98,13 +93,24 @@
 
 		#viaje-project-box {
 			background:
-				/* top, transparent red, faked with gradient */
 				linear-gradient(
 					rgba(0, 0, 0, 0.5),
 					rgba(0, 0, 0, 0.5)
 				),
 				/* bottom, image */
 				url('img/viaje-work-photo.jpg');
+				background-position: center;
+				background-size: cover;
+		}
+
+		#energy-project-box {
+			background:
+				linear-gradient(
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)
+				),
+				/* bottom, image */
+				url('img/energy-photo.png');
 				background-position: center;
 				background-size: cover;
 		}
@@ -283,11 +289,15 @@
 			}
 
 			#fantasy-project-box {
-				width: 33.4%;
+				width: 25%;
 			}
 
 			#viaje-project-box {
-				width: 66.6%;
+				width: 50%;
+			}
+
+			#energy-project-box {
+				width: 25%;
 			}
 		}
 	}
