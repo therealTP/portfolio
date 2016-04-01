@@ -342,7 +342,7 @@ header #socialBox .social-icon {
 }
 
 header #socialBox .social-icon:hover {
-  border: 1px solid red;
+  border: 1px solid #66CD00;
 }
 
 @media screen and (max-width: 650px) {
@@ -488,7 +488,7 @@ a:active, a:focus {
 }
 
 a:hover {
-  color: red;
+  color: #66CD00;
   cursor: pointer;
 }
 
