@@ -12,7 +12,7 @@ var express = require('express');
 
 // set up express & start app
 var app = express();
-var port = 3500;
+var port = 80;
 
 // set up middleware
 // var corsOptions = {
