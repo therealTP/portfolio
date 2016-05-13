@@ -538,7 +538,7 @@ footer #mainNav {
 }
 
 footer #mainNav .nav-active {
-  border-bottom: 2px solid white;
+  color: #66CD00;
 }
 
 @media screen and (max-width: 400px) {

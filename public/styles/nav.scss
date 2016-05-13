@@ -31,7 +31,7 @@ footer {
     @extend .flex-section;
     justify-content: space-between;
     .nav-active {
-      border-bottom: 2px solid white;
+      color: $link-hover-color;
     }
 
   }
